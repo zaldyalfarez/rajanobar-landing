@@ -866,7 +866,7 @@
             </div>
 
             <!-- Community Snapshot Widget -->
-            <div class="bento-mini-widget community-widget" id="venue">
+            <div class="bento-mini-widget community-widget" id="comm-snapshot">
               <div class="comm-stats-head">
                 <div class="comm-avatar-stack">
                   <span class="comm-avatar" style="background-color: #005a36;">ID</span>
@@ -895,7 +895,486 @@
       </div>
     </section>
 
-    <!-- 10. PRIZEPOOL HADIAH MUSIM 2026 -->
+    <!-- 10. SECTION: VENUE & INFO NOBAR AKBAR -->
+    <section class="section-clean" id="venue">
+      <div class="container">
+
+        <!-- Section Title Bar -->
+        <div class="section-title-wrap">
+          <span class="section-badge"><i data-lucide="map-pin"></i> Titik Kumpul & Komunitas Resmi</span>
+          <h2 class="section-title">Lokasi Venue & Jadwal Nobar Akbar</h2>
+          <p class="section-desc">
+            Saksikan pertandingan akbar bersama ribuan suporter di venue partner resmi Raja Nobar. Dilengkapi giant LED screen 4K, tata suara stadion atmosferik, kuis doorprize langsung di tempat, dan reservasi kursi prioritas tanpa dipungut biaya.
+          </p>
+        </div>
+
+        <!-- 4 Highlights Stat Boxes -->
+        <div class="venue-stats-strip">
+          <div class="venue-stat-box">
+            <div class="venue-stat-icon">
+              <i data-lucide="map-pin"></i>
+            </div>
+            <div class="venue-stat-info">
+              <strong>50+ Titik Kumpul</strong>
+              <span>Tersebar di kota-kota besar RI</span>
+            </div>
+          </div>
+
+          <div class="venue-stat-box">
+            <div class="venue-stat-icon">
+              <i data-lucide="tv"></i>
+            </div>
+            <div class="venue-stat-info">
+              <strong>Giant LED Screen 4K</strong>
+              <span>Visual jernih & sound menggelegar</span>
+            </div>
+          </div>
+
+          <div class="venue-stat-box">
+            <div class="venue-stat-icon">
+              <i data-lucide="gift"></i>
+            </div>
+            <div class="venue-stat-info">
+              <strong>Doorprize di Tempat</strong>
+              <span>Jersey original & smartphone</span>
+            </div>
+          </div>
+
+          <div class="venue-stat-box">
+            <div class="venue-stat-icon">
+              <i data-lucide="shield-check"></i>
+            </div>
+            <div class="venue-stat-info">
+              <strong>100% Bebas HTM</strong>
+              <span>Gratis untuk semua suporter</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive City Filter Tabs -->
+        <div class="venue-filter-bar" role="tablist" aria-label="Filter Kota Venue Nobar">
+          <button class="venue-filter-btn active" onclick="filterVenues('all', this)" role="tab" aria-selected="true">Semua Lokasi (6)</button>
+          <button class="venue-filter-btn" onclick="filterVenues('jakarta', this)" role="tab" aria-selected="false">Jakarta Pusat</button>
+          <button class="venue-filter-btn" onclick="filterVenues('surabaya', this)" role="tab" aria-selected="false">Surabaya</button>
+          <button class="venue-filter-btn" onclick="filterVenues('bandung', this)" role="tab" aria-selected="false">Bandung</button>
+          <button class="venue-filter-btn" onclick="filterVenues('medan', this)" role="tab" aria-selected="false">Medan</button>
+          <button class="venue-filter-btn" onclick="filterVenues('bali-diy', this)" role="tab" aria-selected="false">Bali & DIY</button>
+        </div>
+
+        <!-- Venue Cards Grid -->
+        <div class="venue-grid" id="venueGrid">
+
+          <!-- Card 1: Featured Hero Venue (Jakarta - GBK Senayan) -->
+          <div class="venue-card venue-card-featured" data-city="jakarta">
+            <div class="venue-featured-img-wrap">
+              <img src="assets/stadium_hero.jpg" alt="GBK Senayan Sports Zone Jakarta" class="venue-featured-img" loading="lazy">
+              <div class="venue-featured-badge">
+                <i data-lucide="award"></i> VENUE UTAMA AKBAR
+              </div>
+              <div class="venue-featured-pill">
+                <i data-lucide="flame"></i> LIVE NOBAR INDONESIA VS VIETNAM
+              </div>
+            </div>
+            <div class="venue-card-body">
+              <div>
+                <div class="venue-meta-top">
+                  <span class="venue-city-tag"><i data-lucide="map-pin"></i> Jakarta Pusat</span>
+                  <span class="venue-status-tag"><i data-lucide="check-circle-2"></i> Buka Reservasi</span>
+                </div>
+                <h3 class="venue-title">GBK Senayan Fan Zone & Sports Pavilion</h3>
+                <p class="venue-address">
+                  <i data-lucide="navigation"></i>
+                  <span>Plaza Barat Gelora Bung Karno, Jl. Pintu Satu Senayan, Tanah Abang, Jakarta Pusat</span>
+                </p>
+
+                <div class="venue-match-pill">
+                  <div class="venue-match-title">
+                    <i data-lucide="tv"></i> <span>Indonesia vs Vietnam</span>
+                  </div>
+                  <span class="venue-match-time">20:00 WIB (Gate: 17:30)</span>
+                </div>
+
+                <div class="venue-capacity-bar-wrap">
+                  <div class="venue-capacity-labels">
+                    <strong>Kapasitas Kursi: 800 Orang</strong>
+                    <span>Tersisa 65 Kursi VIP</span>
+                  </div>
+                  <div class="venue-capacity-track">
+                    <div class="venue-capacity-fill" style="width: 92%;"></div>
+                  </div>
+                </div>
+
+                <div class="venue-facilities-wrap">
+                  <span class="venue-facility-chip"><i data-lucide="monitor"></i> Giant LED 8x5m 4K</span>
+                  <span class="venue-facility-chip"><i data-lucide="volume-2"></i> Audio Dolby Atmos</span>
+                  <span class="venue-facility-chip"><i data-lucide="coffee"></i> Food Truck Zone</span>
+                  <span class="venue-facility-chip"><i data-lucide="gift"></i> Doorprize Jersey</span>
+                  <span class="venue-facility-chip"><i data-lucide="users"></i> VIP Member Lounge</span>
+                </div>
+              </div>
+
+              <div class="venue-card-actions">
+                <button class="btn btn-primary" onclick="openJoinModal('Reservasi: GBK Senayan Jakarta')">
+                  Reservasi Kursi VIP (Gratis)
+                </button>
+                <a href="https://maps.google.com/?q=Plaza+Barat+GBK+Senayan" target="_blank" rel="noopener noreferrer" class="btn btn-outline" title="Buka di Google Maps">
+                  <i data-lucide="external-link"></i> Rute
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Surabaya (Sutos Arena) -->
+          <div class="venue-card" data-city="surabaya">
+            <div class="venue-card-body">
+              <div>
+                <div class="venue-meta-top">
+                  <span class="venue-city-tag"><i data-lucide="map-pin"></i> Surabaya</span>
+                  <span class="venue-status-tag"><i data-lucide="check-circle-2"></i> Buka Reservasi</span>
+                </div>
+                <h3 class="venue-title">Sutos Atrium & Sky Sports Arena</h3>
+                <p class="venue-address">
+                  <i data-lucide="navigation"></i>
+                  <span>Surabaya Town Square, Jl. Hayam Wuruk No. 6, Sawahan, Surabaya</span>
+                </p>
+
+                <div class="venue-match-pill">
+                  <div class="venue-match-title">
+                    <i data-lucide="tv"></i> <span>Indonesia vs Vietnam</span>
+                  </div>
+                  <span class="venue-match-time">20:00 WIB</span>
+                </div>
+
+                <div class="venue-capacity-bar-wrap">
+                  <div class="venue-capacity-labels">
+                    <strong>Kapasitas: 500 Suporter</strong>
+                    <span>Tersisa 42 Kursi</span>
+                  </div>
+                  <div class="venue-capacity-track">
+                    <div class="venue-capacity-fill" style="width: 88%;"></div>
+                  </div>
+                </div>
+
+                <div class="venue-facilities-wrap">
+                  <span class="venue-facility-chip"><i data-lucide="monitor"></i> Dual Mega Projector</span>
+                  <span class="venue-facility-chip"><i data-lucide="volume-2"></i> Chant Sound Booster</span>
+                  <span class="venue-facility-chip"><i data-lucide="gift"></i> Doorprize Smartphone</span>
+                  <span class="venue-facility-chip"><i data-lucide="music"></i> Live DJ Halftime</span>
+                </div>
+              </div>
+
+              <div class="venue-card-actions">
+                <button class="btn btn-primary" onclick="openJoinModal('Reservasi: Sutos Arena Surabaya')">
+                  Reservasi Kursi
+                </button>
+                <a href="https://maps.google.com/?q=Surabaya+Town+Square" target="_blank" rel="noopener noreferrer" class="btn btn-outline" title="Buka di Google Maps">
+                  <i data-lucide="external-link"></i> Rute
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Bandung (Dago Heritage) -->
+          <div class="venue-card" data-city="bandung">
+            <div class="venue-card-body">
+              <div>
+                <div class="venue-meta-top">
+                  <span class="venue-city-tag"><i data-lucide="map-pin"></i> Bandung</span>
+                  <span class="venue-status-tag"><i data-lucide="check-circle-2"></i> Buka Reservasi</span>
+                </div>
+                <h3 class="venue-title">Dago Heritage Sports Pavilion</h3>
+                <p class="venue-address">
+                  <i data-lucide="navigation"></i>
+                  <span>Jl. Raya Dago Atas No. 128, Coblong, Kota Bandung</span>
+                </p>
+
+                <div class="venue-match-pill">
+                  <div class="venue-match-title">
+                    <i data-lucide="tv"></i> <span>Indonesia vs Vietnam</span>
+                  </div>
+                  <span class="venue-match-time">20:00 WIB</span>
+                </div>
+
+                <div class="venue-capacity-bar-wrap">
+                  <div class="venue-capacity-labels">
+                    <strong>Kapasitas: 450 Suporter</strong>
+                    <span>Tersisa 28 Kursi</span>
+                  </div>
+                  <div class="venue-capacity-track">
+                    <div class="venue-capacity-fill" style="width: 93%;"></div>
+                  </div>
+                </div>
+
+                <div class="venue-facilities-wrap">
+                  <span class="venue-facility-chip"><i data-lucide="monitor"></i> Outdoor Video Wall</span>
+                  <span class="venue-facility-chip"><i data-lucide="coffee"></i> Kopi & BBQ Corner</span>
+                  <span class="venue-facility-chip"><i data-lucide="gift"></i> Doorprize Official Merch</span>
+                  <span class="venue-facility-chip"><i data-lucide="music"></i> Akustik Pre-Match</span>
+                </div>
+              </div>
+
+              <div class="venue-card-actions">
+                <button class="btn btn-primary" onclick="openJoinModal('Reservasi: Dago Heritage Bandung')">
+                  Reservasi Kursi
+                </button>
+                <a href="https://maps.google.com/?q=Dago+Atas+Bandung" target="_blank" rel="noopener noreferrer" class="btn btn-outline" title="Buka di Google Maps">
+                  <i data-lucide="external-link"></i> Rute
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Medan (Merdeka Walk Arena) -->
+          <div class="venue-card" data-city="medan">
+            <div class="venue-card-body">
+              <div>
+                <div class="venue-meta-top">
+                  <span class="venue-city-tag"><i data-lucide="map-pin"></i> Medan</span>
+                  <span class="venue-status-tag"><i data-lucide="check-circle-2"></i> Buka Reservasi</span>
+                </div>
+                <h3 class="venue-title">Merdeka Walk Urban Arena</h3>
+                <p class="venue-address">
+                  <i data-lucide="navigation"></i>
+                  <span>Komp. Lapangan Merdeka, Jl. Balai Kota, Kesawan, Medan Barat</span>
+                </p>
+
+                <div class="venue-match-pill">
+                  <div class="venue-match-title">
+                    <i data-lucide="tv"></i> <span>Indonesia vs Vietnam</span>
+                  </div>
+                  <span class="venue-match-time">20:00 WIB</span>
+                </div>
+
+                <div class="venue-capacity-bar-wrap">
+                  <div class="venue-capacity-labels">
+                    <strong>Kapasitas: 400 Suporter</strong>
+                    <span>Tersisa 54 Kursi</span>
+                  </div>
+                  <div class="venue-capacity-track">
+                    <div class="venue-capacity-fill" style="width: 86%;"></div>
+                  </div>
+                </div>
+
+                <div class="venue-facilities-wrap">
+                  <span class="venue-facility-chip"><i data-lucide="monitor"></i> LED Cinema 6x4m</span>
+                  <span class="venue-facility-chip"><i data-lucide="coffee"></i> Kuliner Khas Medan</span>
+                  <span class="venue-facility-chip"><i data-lucide="volume-2"></i> Drum & Chant Corner</span>
+                  <span class="venue-facility-chip"><i data-lucide="gift"></i> Saldo E-Wallet Halftime</span>
+                </div>
+              </div>
+
+              <div class="venue-card-actions">
+                <button class="btn btn-primary" onclick="openJoinModal('Reservasi: Merdeka Walk Medan')">
+                  Reservasi Kursi
+                </button>
+                <a href="https://maps.google.com/?q=Lapangan+Merdeka+Medan" target="_blank" rel="noopener noreferrer" class="btn btn-outline" title="Buka di Google Maps">
+                  <i data-lucide="external-link"></i> Rute
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5: Bali (Canggu Beachside Hub) -->
+          <div class="venue-card" data-city="bali-diy">
+            <div class="venue-card-body">
+              <div>
+                <div class="venue-meta-top">
+                  <span class="venue-city-tag"><i data-lucide="map-pin"></i> Bali</span>
+                  <span class="venue-status-tag"><i data-lucide="check-circle-2"></i> Buka Reservasi</span>
+                </div>
+                <h3 class="venue-title">Canggu Beachside Football Lounge</h3>
+                <p class="venue-address">
+                  <i data-lucide="navigation"></i>
+                  <span>Jl. Pantai Batu Bolong No. 88, Canggu, Kuta Utara, Badung, Bali</span>
+                </p>
+
+                <div class="venue-match-pill">
+                  <div class="venue-match-title">
+                    <i data-lucide="tv"></i> <span>Indonesia vs Vietnam</span>
+                  </div>
+                  <span class="venue-match-time">21:00 WITA</span>
+                </div>
+
+                <div class="venue-capacity-bar-wrap">
+                  <div class="venue-capacity-labels">
+                    <strong>Kapasitas: 350 Suporter</strong>
+                    <span>Tersisa 20 Kursi</span>
+                  </div>
+                  <div class="venue-capacity-track">
+                    <div class="venue-capacity-fill" style="width: 94%;"></div>
+                  </div>
+                </div>
+
+                <div class="venue-facilities-wrap">
+                  <span class="venue-facility-chip"><i data-lucide="monitor"></i> Triple Daylight Display</span>
+                  <span class="venue-facility-chip"><i data-lucide="coffee"></i> Beach Sunset Chill</span>
+                  <span class="venue-facility-chip"><i data-lucide="users"></i> Fans Multinasional</span>
+                  <span class="venue-facility-chip"><i data-lucide="gift"></i> Doorprize Jersey</span>
+                </div>
+              </div>
+
+              <div class="venue-card-actions">
+                <button class="btn btn-primary" onclick="openJoinModal('Reservasi: Canggu Beachside Bali')">
+                  Reservasi Kursi
+                </button>
+                <a href="https://maps.google.com/?q=Batu+Bolong+Canggu+Bali" target="_blank" rel="noopener noreferrer" class="btn btn-outline" title="Buka di Google Maps">
+                  <i data-lucide="external-link"></i> Rute
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6: Yogyakarta (Malioboro Terrace Hub) -->
+          <div class="venue-card" data-city="bali-diy">
+            <div class="venue-card-body">
+              <div>
+                <div class="venue-meta-top">
+                  <span class="venue-city-tag"><i data-lucide="map-pin"></i> Yogyakarta</span>
+                  <span class="venue-status-tag" style="background-color: #fef3c7; color: #b45309;"><i data-lucide="flame"></i> Hampir Penuh</span>
+                </div>
+                <h3 class="venue-title">Malioboro Terrace Football Hub</h3>
+                <p class="venue-address">
+                  <i data-lucide="navigation"></i>
+                  <span>Jl. Malioboro No. 42, Sosromenduran, Gedong Tengen, Kota Yogyakarta</span>
+                </p>
+
+                <div class="venue-match-pill">
+                  <div class="venue-match-title">
+                    <i data-lucide="tv"></i> <span>Indonesia vs Vietnam</span>
+                  </div>
+                  <span class="venue-match-time">20:00 WIB</span>
+                </div>
+
+                <div class="venue-capacity-bar-wrap">
+                  <div class="venue-capacity-labels">
+                    <strong>Kapasitas: 300 Suporter</strong>
+                    <span>Tersisa 15 Kursi</span>
+                  </div>
+                  <div class="venue-capacity-track">
+                    <div class="venue-capacity-fill" style="width: 95%;"></div>
+                  </div>
+                </div>
+
+                <div class="venue-facilities-wrap">
+                  <span class="venue-facility-chip"><i data-lucide="monitor"></i> 4K Cinema + 8 Monitor</span>
+                  <span class="venue-facility-chip"><i data-lucide="coffee"></i> Angkringan Partner</span>
+                  <span class="venue-facility-chip"><i data-lucide="users"></i> Bedah Taktik Suporter</span>
+                  <span class="venue-facility-chip"><i data-lucide="gift"></i> Doorprize Hoodie</span>
+                </div>
+              </div>
+
+              <div class="venue-card-actions">
+                <button class="btn btn-primary" onclick="openJoinModal('Reservasi: Malioboro Terrace Yogyakarta')">
+                  Reservasi Kursi
+                </button>
+                <a href="https://maps.google.com/?q=Malioboro+Yogyakarta" target="_blank" rel="noopener noreferrer" class="btn btn-outline" title="Buka di Google Maps">
+                  <i data-lucide="external-link"></i> Rute
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Nobar Event Details, Rundown & Guidelines -->
+        <div class="venue-event-info-box">
+          <div class="venue-event-head">
+            <div class="venue-event-head-left">
+              <h3>Panduan Lengkap & Informasi Acara Nobar</h3>
+              <p>Segala hal yang perlu kamu ketahui sebelum datang ke venue resmi Raja Nobar.</p>
+            </div>
+            <button class="btn btn-outline btn-sm" onclick="openJoinModal('Pendaftaran Nobar Akbar')">
+              <i data-lucide="calendar"></i> Konfirmasi Kehadiran
+            </button>
+          </div>
+
+          <div class="venue-event-layout">
+            <!-- Left: Timeline Rundown -->
+            <div>
+              <div class="nobar-rundown-title">
+                <i data-lucide="clock"></i> Rundown Acara Nobar
+              </div>
+
+              <div class="nobar-timeline">
+                <div class="nobar-timeline-step">
+                  <span class="nobar-time-badge">17:30 - 18:30 WIB</span>
+                  <h4 class="nobar-step-title">Open Gate & Check-in Member</h4>
+                  <p class="nobar-step-desc">Penukaran konfirmasi reservasi, pembagian sticker pack suporter resmi, dan klaim voucher makanan/minuman bagi member Silver & Gold.</p>
+                </div>
+
+                <div class="nobar-timeline-step">
+                  <span class="nobar-time-badge">18:30 - 19:30 WIB</span>
+                  <h4 class="nobar-step-title">Pre-Match Talkshow & Bedah Lineup</h4>
+                  <p class="nobar-step-desc">Analisis statistik taktik, susunan pemain resmi, dan perbincangan interaktif bersama pengamat sepak bola dan MC komunitas.</p>
+                </div>
+
+                <div class="nobar-timeline-step">
+                  <span class="nobar-time-badge">19:30 - 20:00 WIB</span>
+                  <h4 class="nobar-step-title">Anthem 'Indonesia Raya' & Koreo Chant</h4>
+                  <p class="nobar-step-desc">Menyanyikan lagu kebangsaan serentak di seluruh venue bersama drum band komunitas untuk memanaskan atmosfer laga akbar.</p>
+                </div>
+
+                <div class="nobar-timeline-step">
+                  <span class="nobar-time-badge">20:45 WIB (Halftime)</span>
+                  <h4 class="nobar-step-title">Kuis Halftime & Doorprize Langsung</h4>
+                  <p class="nobar-step-desc">Sesi kuis tebak pencetak gol dan skor akhir secara on-the-spot di venue dengan hadiah langsung jersey original dan smartphone.</p>
+                </div>
+
+                <div class="nobar-timeline-step">
+                  <span class="nobar-time-badge">21:50 WIB (Fulltime)</span>
+                  <h4 class="nobar-step-title">Selebrasi Bersama & Update Poin Member</h4>
+                  <p class="nobar-step-desc">Perolehan poin tebak skor langsung masuk otomatis ke akun profil dan peringkat klasemen Raja Nobar malam itu juga.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: 4 Guidelines & Rules -->
+            <div>
+              <div class="nobar-rundown-title">
+                <i data-lucide="shield-check"></i> Ketentuan & Fasilitas Acara
+              </div>
+
+              <div class="nobar-guidelines-grid">
+                <div class="nobar-guide-card">
+                  <div class="nobar-guide-icon">
+                    <i data-lucide="ticket"></i>
+                  </div>
+                  <h4>100% Bebas Tiket (Gratis)</h4>
+                  <p>Acara tidak memungut biaya tiket masuk (HTM Rp 0). Cukup miliki akun terdaftar di Raja Nobar dan tunjukkan profilmu di smartphone.</p>
+                </div>
+
+                <div class="nobar-guide-card">
+                  <div class="nobar-guide-icon">
+                    <i data-lucide="award"></i>
+                  </div>
+                  <h4>Jalur Khusus Member Silver & Gold</h4>
+                  <p>Anggota berstatus Silver Royale & Gold Master berhak mendapatkan baris kursi VIP terdepan dengan pandangan paling presisi ke giant screen.</p>
+                </div>
+
+                <div class="nobar-guide-card">
+                  <div class="nobar-guide-icon">
+                    <i data-lucide="gift"></i>
+                  </div>
+                  <h4>Doorprize Resmi Tanpa Diundi</h4>
+                  <p>Kuis on-the-spot dinilai murni dari ketepatan jawaban dan analisa sepak bola, hadiah diserahkan langsung oleh MC tanpa biaya pajak pemenang.</p>
+                </div>
+
+                <div class="nobar-guide-card">
+                  <div class="nobar-guide-icon">
+                    <i data-lucide="heart-handshake"></i>
+                  </div>
+                  <h4>Tertib & Ramah Keluarga</h4>
+                  <p>Venue dirancang aman, bersih, dan nyaman bagi suporter segala usia. Dilarang keras membawa flare/kembang api, sajam, atau minuman keras luar.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 11. PRIZEPOOL HADIAH MUSIM 2026 -->
     <section class="section-clean bg-subtle" id="prizepool">
       <div class="container">
         

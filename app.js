@@ -169,6 +169,40 @@ function filterTeamSchedule(teamName) {
 }
 
 /* --------------------------------------------------------------------------
+   3.5 VENUE FILTERING
+   -------------------------------------------------------------------------- */
+function filterVenues(city, btn) {
+  const filterBtns = document.querySelectorAll('.venue-filter-btn');
+  filterBtns.forEach(b => {
+    b.classList.remove('active');
+    b.setAttribute('aria-selected', 'false');
+  });
+  if (btn) {
+    btn.classList.add('active');
+    btn.setAttribute('aria-selected', 'true');
+  }
+
+  const cards = document.querySelectorAll('.venue-card');
+  let matchCount = 0;
+
+  cards.forEach(card => {
+    const cardCity = card.getAttribute('data-city');
+    if (city === 'all' || cardCity === city) {
+      card.style.display = card.classList.contains('venue-card-featured') ? 'grid' : 'flex';
+      matchCount++;
+      if (typeof gsap !== 'undefined') {
+        gsap.fromTo(card, { opacity: 0, y: 15 }, { opacity: 1, y: 0, duration: 0.3, ease: 'power2.out' });
+      }
+    } else {
+      card.style.display = 'none';
+    }
+  });
+
+  const cityLabel = btn ? btn.textContent.trim() : city;
+  showToast('Lokasi Nobar', `Menampilkan: ${cityLabel} (${matchCount} venue)`);
+}
+
+/* --------------------------------------------------------------------------
    4. PRIZEPOOL TABS & DRAWER
    -------------------------------------------------------------------------- */
 function switchPrizePool(tab) {
@@ -242,6 +276,10 @@ function openJoinModal(context = 'Daftar Akun') {
     subtitle.textContent = `Lengkapi kontakmu untuk mengunci tiket ${context.replace('Simpan Prediksi: ', '')}.`;
   } else if (subtitle && context.startsWith('Prediksi:')) {
     subtitle.textContent = `Lengkapi formulir singkat untuk memasang prediksi pada ${context}.`;
+  } else if (subtitle && context.startsWith('Reservasi:')) {
+    subtitle.textContent = `Konfirmasi kontak untuk mengamankan kursi nonton bareng di ${context.replace('Reservasi: ', '')}.`;
+  } else if (subtitle && context.startsWith('Pendaftaran Nobar')) {
+    subtitle.textContent = 'Daftarkan nama & nomor WhatsApp untuk reservasi kuota nonton bareng resmi.';
   } else if (subtitle) {
     subtitle.textContent = 'Buat akun dalam 30 detik untuk mengamankan kuota prediksi dan booster harianmu.';
   }
