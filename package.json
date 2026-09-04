@@ -4,7 +4,7 @@
   "description": "Raja Nobar Indonesia - Platform Resmi Tebak Skor & Nobar Sepak Bola",
   "homepage": "https://zaldyalfarez.github.io/rajanobar-landing",
   "scripts": {
-    "deploy": "gh-pages -d . -t true"
+    "deploy": "gh-pages -d . -t --nojekyll"
   },
   "devDependencies": {
     "gh-pages": "^6.3.0"
