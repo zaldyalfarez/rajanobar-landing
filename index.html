@@ -1,0 +1,1413 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Raja Nobar Indonesia - Platform resmi tebak skor sepak bola dan komunitas nonton bareng terbesar. Prediksi hasil pertandingan piala dunia, kumpulkan poin klasemen, dan raih hadiah resmi tanpa diundi.">
+  <meta name="keywords" content="raja nobar, tebak skor bola, nonton bareng, prediksi piala dunia, hadiah smartphone, komunitas sepak bola indonesia">
+  <meta property="og:title" content="Raja Nobar Indonesia - Tebak Skor & Nobar Sepak Bola">
+  <meta property="og:description" content="Platform resmi tebak skor sepak bola dan komunitas nonton bareng terbesar. Kumpulkan poin klasemen dan raih hadiah resmi tanpa diundi.">
+  <meta property="og:type" content="website">
+
+  <title>Raja Nobar Indonesia - Tebak Skor & Nonton Bareng Resmi</title>
+
+  <!-- Google Fonts: Inter & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <script>
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    window.scrollTo(0, 0);
+  </script>
+</head>
+<body>
+
+  <!-- 1. TOP ANNOUNCEMENT BAR -->
+  <aside class="top-announcement" aria-label="Pengumuman Acara">
+    <div class="container top-announcement-inner">
+      <span class="announcement-pill">Musim 2026</span>
+      <p class="announcement-text">
+        Prizepool total Rp 250.000.000 telah dibuka untuk Kualifikasi Piala Dunia. Ikuti prediksi pertandingan hari ini secara gratis.
+      </p>
+      <a href="#simulator" class="announcement-action">Tebak Skor Sekarang &rarr;</a>
+    </div>
+  </aside>
+
+  <!-- 2. RUNNING MARQUEE TICKER -->
+  <div class="live-ticker" aria-label="Pita Informasi Pertandingan">
+    <div class="ticker-tag">
+      <span class="ticker-dot"></span>
+      <span>INFO TERKINI</span>
+    </div>
+    <div class="ticker-scroll-area">
+      <div class="ticker-content">
+        <span class="ticker-entry"><i data-lucide="circle-dot" class="ticker-icon"></i> <strong>Hasil Terbaru:</strong> Indonesia 2 - 0 Filipina (Poin Klasemen Telah Masuk)</span>
+        <span class="ticker-sep">•</span>
+        <span class="ticker-entry"><i data-lucide="trophy" class="ticker-icon"></i> <strong>Juara Pekan Ini:</strong> @budi_santoso meraih 1.850 Pts (Hadiah: Samsung Galaxy S24 Ultra)</span>
+        <span class="ticker-sep">•</span>
+        <span class="ticker-entry"><i data-lucide="flame" class="ticker-icon"></i> <strong>Laga Akbar Hari Ini:</strong> INDONESIA vs VIETNAM (20:00 WIB di Stadion GBK)</span>
+        <span class="ticker-sep">•</span>
+        <span class="ticker-entry"><i data-lucide="sparkles" class="ticker-icon"></i> <strong>Program Referral:</strong> Ajak 5 kawan nobar untuk upgrade otomatis ke Silver Royale gratis!</span>
+        <span class="ticker-sep">•</span>
+        <!-- Duplicated track for smooth loop -->
+        <span class="ticker-entry"><i data-lucide="circle-dot" class="ticker-icon"></i> <strong>Hasil Terbaru:</strong> Indonesia 2 - 0 Filipina (Poin Klasemen Telah Masuk)</span>
+        <span class="ticker-sep">•</span>
+        <span class="ticker-entry"><i data-lucide="trophy" class="ticker-icon"></i> <strong>Juara Pekan Ini:</strong> @budi_santoso meraih 1.850 Pts (Hadiah: Samsung Galaxy S24 Ultra)</span>
+        <span class="ticker-sep">•</span>
+        <span class="ticker-entry"><i data-lucide="flame" class="ticker-icon"></i> <strong>Laga Akbar Hari Ini:</strong> INDONESIA vs VIETNAM (20:00 WIB di Stadion GBK)</span>
+        <span class="ticker-sep">•</span>
+        <span class="ticker-entry"><i data-lucide="sparkles" class="ticker-icon"></i> <strong>Program Referral:</strong> Ajak 5 kawan nobar untuk upgrade otomatis ke Silver Royale gratis!</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. SITE HEADER DENGAN WARNA BRAND HIJAU GELAP (#003b1f) & LOGO ASLI PENGGUNA -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-container">
+      <a href="#" class="brand-link" aria-label="Raja Nobar Indonesia Beranda">
+        <!-- Logo Asli Pengguna (Teks Putih + ID Merah) -->
+        <img src="assets/Logo.png" alt="Raja Nobar Indonesia" class="brand-logo-nav" loading="eager">
+      </a>
+
+      <nav class="site-nav" aria-label="Navigasi Utama">
+        <ul class="nav-menu">
+          <li><a href="#simulator" class="nav-link">Pertandingan</a></li>
+          <li><a href="#jadwal" class="nav-link">Jadwal</a></li>
+          <li><a href="#top-teams" class="nav-link">Tim</a></li>
+          <li><a href="#venue" class="nav-link">Venue</a></li>
+          <li><a href="#app-preview" class="nav-link">Aplikasi</a></li>
+          <li><a href="#prizepool" class="nav-link">Prizepool</a></li>
+          <li><a href="#membership" class="nav-link">Membership</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+          <li><a href="#komunitas" class="nav-link">Komunitas</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn btn-ghost" onclick="openJoinModal('Masuk')" id="loginBtn">Masuk</button>
+        <button class="btn btn-primary" onclick="openJoinModal('Daftar Akun')" id="registerBtn">Daftar Akun</button>
+        <button class="nav-toggle" id="menuToggle" aria-label="Menu Navigasi" aria-expanded="false">
+          <span class="bar-line"></span>
+          <span class="bar-line"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobileNav">
+      <div class="container">
+        <ul class="mobile-menu-list">
+          <li><a href="#simulator" onclick="closeMobileMenu()">Pertandingan</a></li>
+          <li><a href="#jadwal" onclick="closeMobileMenu()">Jadwal</a></li>
+          <li><a href="#top-teams" onclick="closeMobileMenu()">Tim</a></li>
+          <li><a href="#venue" onclick="closeMobileMenu()">Venue</a></li>
+          <li><a href="#app-preview" onclick="closeMobileMenu()">Aplikasi</a></li>
+          <li><a href="#prizepool" onclick="closeMobileMenu()">Prizepool</a></li>
+          <li><a href="#membership" onclick="closeMobileMenu()">Membership</a></li>
+          <li><a href="#faq" onclick="closeMobileMenu()">FAQ</a></li>
+          <li><a href="#komunitas" onclick="closeMobileMenu()">Komunitas</a></li>
+        </ul>
+        <div class="mobile-actions">
+          <button class="btn btn-ghost full-width" onclick="openJoinModal('Masuk'); closeMobileMenu();">Masuk</button>
+          <button class="btn btn-primary full-width" onclick="openJoinModal('Daftar Akun'); closeMobileMenu();">Daftar Akun</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- 4. HERO SECTION: MATCH PREDICTOR ARENA DENGAN CIRCLE-FLAGS RESMI -->
+    <section class="hero-arena">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Hero Text -->
+          <div class="hero-intro">
+            <div class="status-pill">
+              <span class="pulse-indicator"></span>
+              <span>Pertandingan Akbar Hari Ini • 20:00 WIB</span>
+            </div>
+
+            <h1 class="hero-title">
+              Tebak skor pertandingan bola. Kumpulkan poin, menangkan hadiah nyata.
+            </h1>
+
+            <p class="hero-description">
+              Platform tebak skor dan komunitas nobar terpercaya di Indonesia. Analisis pertandingan piala dunia dan timnas favoritmu tanpa biaya sepeser pun, raih puncak klasemen, dan menangkan Samsung Galaxy S24 Ultra bergaransi resmi.
+            </p>
+
+            <div class="hero-btn-row">
+              <a href="#simulator" class="btn btn-primary btn-lg">Coba Tebak Skor</a>
+              <a href="#prizepool" class="btn btn-outline btn-lg">Lihat Daftar Hadiah</a>
+            </div>
+
+            <div class="hero-stats-bar">
+              <div class="stat-cell">
+                <span class="stat-number">50.000+</span>
+                <span class="stat-caption">Peserta aktif nobar</span>
+              </div>
+              <div class="stat-separator" aria-hidden="true"></div>
+              <div class="stat-cell">
+                <span class="stat-number">Rp 250 Jt</span>
+                <span class="stat-caption">Total hadiah musim ini</span>
+              </div>
+              <div class="stat-separator" aria-hidden="true"></div>
+              <div class="stat-cell">
+                <span class="stat-number">100%</span>
+                <span class="stat-caption">Gratis tanpa undian</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Widget: Clean Match Predictor Card -->
+          <div class="hero-predictor" id="simulator">
+            <div class="match-arena-card">
+              
+              <div class="arena-header">
+                <div class="arena-competition">
+                  <i data-lucide="trophy" class="hero-trophy-icon"></i>
+                  <span>Kualifikasi Piala Dunia 2026</span>
+                </div>
+                <div class="arena-timer">
+                  Kick-off dalam: <strong id="cdDisplay">03:42:15</strong>
+                </div>
+              </div>
+
+              <!-- Score Stepper Area with Official Circle-Flags -->
+              <div class="arena-teams-layout">
+                <!-- Home Team: Indonesia -->
+                <div class="team-unit">
+                  <div class="team-flag-emblem">
+                    <img src="assets/flags/id.svg" alt="Indonesia" class="team-flag-img" loading="eager">
+                  </div>
+                  <strong class="team-heading">Indonesia</strong>
+                  <span class="team-subtext">Tuan Rumah</span>
+
+                  <div class="score-stepper">
+                    <button class="step-btn" onclick="adjustSimScore('team1', -1)" aria-label="Kurangi skor Indonesia">&minus;</button>
+                    <span class="score-digit" id="simScoreTeam1">2</span>
+                    <button class="step-btn" onclick="adjustSimScore('team1', 1)" aria-label="Tambah skor Indonesia">&plus;</button>
+                  </div>
+                </div>
+
+                <div class="arena-vs-column">
+                  <span class="vs-circle">VS</span>
+                  <span class="venue-sub">GBK, Jakarta</span>
+                </div>
+
+                <!-- Away Team: Vietnam -->
+                <div class="team-unit">
+                  <div class="team-flag-emblem">
+                    <img src="assets/flags/vn.svg" alt="Vietnam" class="team-flag-img" loading="eager">
+                  </div>
+                  <strong class="team-heading">Vietnam</strong>
+                  <span class="team-subtext">Tim Tamu</span>
+
+                  <div class="score-stepper">
+                    <button class="step-btn" onclick="adjustSimScore('team2', -1)" aria-label="Kurangi skor Vietnam">&minus;</button>
+                    <span class="score-digit" id="simScoreTeam2">1</span>
+                    <button class="step-btn" onclick="adjustSimScore('team2', 1)" aria-label="Tambah skor Vietnam">&plus;</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Predictor Options -->
+              <div class="arena-controls">
+                <label class="booster-toggle" for="boosterCheckbox">
+                  <input type="checkbox" id="boosterCheckbox" checked onchange="calculateSimPoints()">
+                  <span class="custom-checkbox" aria-hidden="true">
+                    <i data-lucide="check"></i>
+                  </span>
+                  <span class="toggle-text">
+                    <span class="toggle-title"><strong><i data-lucide="zap" class="booster-icon"></i> Aktifkan 2x Point Booster</strong></span>
+                    <span class="toggle-hint">Menggandakan perolehan poin kemenangan pada pertandingan ini</span>
+                  </span>
+                </label>
+
+                <div class="form-field-row">
+                  <label for="firstGoalSelect" class="field-title">Prediksi Gol Pertama:</label>
+                  <select id="firstGoalSelect" class="form-select-clean" onchange="calculateSimPoints()">
+                    <option value="team1">Indonesia mencetak gol pertama (+100 Poin)</option>
+                    <option value="team2">Vietnam mencetak gol pertama (+100 Poin)</option>
+                    <option value="none">Tanpa gol / Skor imbang kacamata</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Output & Lock CTA -->
+              <div class="arena-footer">
+                <div class="arena-footer-info">
+                  <span class="calc-caption">Estimasi Perolehan Poin:</span>
+                  <div class="calc-number-wrap">
+                    <strong class="calc-amount" id="simResultPoints">+450</strong>
+                    <span class="calc-label-pts">Poin Klasemen</span>
+                  </div>
+                  <div class="calc-community-insight" id="simCommunityStat">
+                    74% analis memprediksi kemenangan Indonesia pada laga ini.
+                  </div>
+                </div>
+
+                <button class="btn btn-primary" onclick="triggerSimLock()" id="lockPredictionBtn">
+                  Kunci Prediksi Skor
+                </button>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. TOP COUNTRIES SELECTOR (CIRCLE-FLAGS RESMI) -->
+    <section class="section-clean bg-subtle" id="top-teams">
+      <div class="container">
+        
+        <div class="section-title-bar">
+          <div>
+            <span class="section-badge">Negara Peserta Unggulan</span>
+            <h2 class="section-title">Pilih Tim Nasional Favorit Anda</h2>
+            <p class="section-desc">Pilih negara peserta favoritmu untuk melihat jadwal pertandingan dan memasang prediksi skor.</p>
+          </div>
+          <span class="badge-count-note">12 Negara Pilihan</span>
+        </div>
+
+        <!-- 12 Circular Country Cards -->
+        <div class="top-teams-grid">
+          
+          <!-- 1. Indonesia -->
+          <button class="team-circle-card active" onclick="filterTeamSchedule('Indonesia')">
+            <div class="team-crest-frame">
+              <img src="assets/flags/id.svg" alt="Indonesia" class="team-circle-img" loading="lazy">
+            </div>
+            <strong class="team-circle-name">Indonesia</strong>
+            <span class="team-circle-meta">Tuan Rumah</span>
+          </button>
+
+          <!-- 2. Vietnam -->
+          <button class="team-circle-card" onclick="filterTeamSchedule('Vietnam')">
+            <div class="team-crest-frame">
+              <img src="assets/flags/vn.svg" alt="Vietnam" class="team-circle-img" loading="lazy">
+            </div>
+            <strong class="team-circle-name">Vietnam</strong>
+            <span class="team-circle-meta">Asia Tenggara</span>
+          </button>
+
+          <!-- 3. Argentina -->
+          <button class="team-circle-card" onclick="filterTeamSchedule('Argentina')">
+            <div class="team-crest-frame">
+              <img src="assets/flags/ar.svg" alt="Argentina" class="team-circle-img" loading="lazy">
+            </div>
+            <strong class="team-circle-name">Argentina</strong>
+            <span class="team-circle-meta">Juara Bertahan</span>
+          </button>
+
+          <!-- 4. Spanyol -->
+          <button class="team-circle-card" onclick="filterTeamSchedule('Spanyol')">
+            <div class="team-crest-frame">
+              <img src="assets/flags/es.svg" alt="Spanyol" class="team-circle-img" loading="lazy">
+            </div>
+            <strong class="team-circle-name">Spanyol</strong>
+            <span class="team-circle-meta">Juara Eropa</span>
+          </button>
+
+          <!-- 5. Brasil -->
+          <button class="team-circle-card" onclick="filterTeamSchedule('Brasil')">
+            <div class="team-crest-frame">
+              <img src="assets/flags/br.svg" alt="Brasil" class="team-circle-img" loading="lazy">
+            </div>
+            <strong class="team-circle-name">Brasil</strong>
+            <span class="team-circle-meta">Selecao</span>
+          </button>
+
+          <!-- 6. Jepang -->
+          <button class="team-circle-card" onclick="filterTeamSchedule('Jepang')">
+            <div class="team-crest-frame">
+              <img src="assets/flags/jp.svg" alt="Jepang" class="team-circle-img" loading="lazy">
+            </div>
+            <strong class="team-circle-name">Jepang</strong>
+            <span class="team-circle-meta">Samurai Blue</span>
+          </button>
+
+          <!-- 7. Jerman -->
+          <button class="team-circle-card" onclick="filterTeamSchedule('Jerman')">
+            <div class="team-crest-frame">
+              <img src="assets/flags/de.svg" alt="Jerman" class="team-circle-img" loading="lazy">
+            </div>
+            <strong class="team-circle-name">Jerman</strong>
+            <span class="team-circle-meta">Die Mannschaft</span>
+          </button>
+
+          <!-- 8. Prancis -->
+          <button class="team-circle-card" onclick="filterTeamSchedule('Prancis')">
+            <div class="team-crest-frame">
+              <img src="assets/flags/fr.svg" alt="Prancis" class="team-circle-img" loading="lazy">
+            </div>
+            <strong class="team-circle-name">Prancis</strong>
+            <span class="team-circle-meta">Les Bleus</span>
+          </button>
+
+          <!-- 9. Inggris -->
+          <button class="team-circle-card" onclick="filterTeamSchedule('Inggris')">
+            <div class="team-crest-frame">
+              <img src="assets/flags/gb-eng.svg" alt="Inggris" class="team-circle-img" loading="lazy">
+            </div>
+            <strong class="team-circle-name">Inggris</strong>
+            <span class="team-circle-meta">Three Lions</span>
+          </button>
+
+          <!-- 10. Portugal -->
+          <button class="team-circle-card" onclick="filterTeamSchedule('Portugal')">
+            <div class="team-crest-frame">
+              <img src="assets/flags/pt.svg" alt="Portugal" class="team-circle-img" loading="lazy">
+            </div>
+            <strong class="team-circle-name">Portugal</strong>
+            <span class="team-circle-meta">Eropa</span>
+          </button>
+
+          <!-- 11. Kroasia -->
+          <button class="team-circle-card" onclick="filterTeamSchedule('Kroasia')">
+            <div class="team-crest-frame">
+              <img src="assets/flags/hr.svg" alt="Kroasia" class="team-circle-img" loading="lazy">
+            </div>
+            <strong class="team-circle-name">Kroasia</strong>
+            <span class="team-circle-meta">Vatreni</span>
+          </button>
+
+          <!-- 12. Belanda -->
+          <button class="team-circle-card" onclick="filterTeamSchedule('Belanda')">
+            <div class="team-crest-frame">
+              <img src="assets/flags/nl.svg" alt="Belanda" class="team-circle-img" loading="lazy">
+            </div>
+            <strong class="team-circle-name">Belanda</strong>
+            <span class="team-circle-meta">Oranje</span>
+          </button>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 6. SECTION: JADWAL PERTANDINGAN PILIHAN (CIRCLE-FLAGS RESMI) -->
+    <section class="section-clean" id="jadwal">
+      <div class="container">
+        
+        <!-- Multi-Sports Category Sub-Bar (Bahasa Indonesia & Lucide Icons) -->
+        <div class="sports-category-bar" role="tablist" aria-label="Kategori Cabang Olahraga">
+          <button class="sport-tab-item active" role="tab" aria-selected="true" onclick="selectSportCategory('football')">
+            <svg class="sport-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polygon points="12 8 15 10 14 14 10 14 9 10"></polygon>
+              <line x1="12" y1="2" x2="12" y2="8"></line>
+              <line x1="12" y1="14" x2="12" y2="22"></line>
+              <line x1="4.93" y1="4.93" x2="9" y2="10"></line>
+              <line x1="19.07" y1="4.93" x2="15" y2="10"></line>
+              <line x1="2" y1="12" x2="9" y2="10"></line>
+              <line x1="22" y1="12" x2="15" y2="10"></line>
+            </svg>
+            <span class="sport-tab-label">Sepak Bola</span>
+          </button>
+
+          <button class="sport-tab-item is-soon" role="tab" aria-selected="false" onclick="showSoonNotice('Bola Basket')">
+            <svg class="sport-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M4.93 4.93c4.24 4.24 4.24 10.9 0 15.14"></path>
+              <path d="M19.07 4.93c-4.24 4.24-4.24 10.9 0 15.14"></path>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <line x1="12" y1="2" x2="12" y2="22"></line>
+            </svg>
+            <span class="sport-tab-label">Bola Basket</span>
+            <span class="sport-soon-badge">segera</span>
+          </button>
+
+          <button class="sport-tab-item is-soon" role="tab" aria-selected="false" onclick="showSoonNotice('Tenis')">
+            <svg class="sport-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9"></circle>
+              <path d="M3 12a9 9 0 0 1 9-9"></path>
+              <path d="M21 12a9 9 0 0 1-9 9"></path>
+            </svg>
+            <span class="sport-tab-label">Tenis</span>
+            <span class="sport-soon-badge">segera</span>
+          </button>
+
+          <button class="sport-tab-item is-soon" role="tab" aria-selected="false" onclick="showSoonNotice('Padel')">
+            <svg class="sport-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="5" y="3" width="14" height="14" rx="7"></rect>
+              <line x1="12" y1="17" x2="12" y2="22"></line>
+              <circle cx="10" cy="8" r="0.5" fill="currentColor"></circle>
+              <circle cx="14" cy="8" r="0.5" fill="currentColor"></circle>
+              <circle cx="10" cy="12" r="0.5" fill="currentColor"></circle>
+              <circle cx="14" cy="12" r="0.5" fill="currentColor"></circle>
+            </svg>
+            <span class="sport-tab-label">Padel</span>
+            <span class="sport-soon-badge">segera</span>
+          </button>
+
+          <button class="sport-tab-item is-soon" role="tab" aria-selected="false" onclick="showSoonNotice('E-Sport')">
+            <i data-lucide="gamepad-2" class="sport-icon"></i>
+            <span class="sport-tab-label">E-Sport</span>
+            <span class="sport-soon-badge">segera</span>
+          </button>
+
+          <button class="sport-tab-item is-soon" role="tab" aria-selected="false" onclick="showSoonNotice('Golf')">
+            <i data-lucide="flag" class="sport-icon"></i>
+            <span class="sport-tab-label">Golf</span>
+            <span class="sport-soon-badge">segera</span>
+          </button>
+
+          <button class="sport-tab-item is-soon" role="tab" aria-selected="false" onclick="showSoonNotice('Balap F1')">
+            <i data-lucide="gauge" class="sport-icon"></i>
+            <span class="sport-tab-label">Balap F1</span>
+            <span class="sport-soon-badge">segera</span>
+          </button>
+
+          <button class="sport-tab-item is-soon" role="tab" aria-selected="false" onclick="showSoonNotice('Bulu Tangkis')">
+            <svg class="sport-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 18a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"></path>
+              <path d="M9 14 4 3"></path>
+              <path d="M15 14 20 3"></path>
+              <path d="M12 12 12 3"></path>
+              <path d="M5 6h14"></path>
+            </svg>
+            <span class="sport-tab-label">Bulu Tangkis</span>
+            <span class="sport-soon-badge">segera</span>
+          </button>
+
+          <!-- Ujung Kanan: 'Lainnya' dengan Chevron (Menggantikan Festival) -->
+          <div class="sport-more-wrapper">
+            <button class="sport-tab-item is-more" id="moreSportsBtn" onclick="toggleMoreSportsMenu(event)">
+              <span class="sport-tab-label">Lainnya</span>
+              <i data-lucide="chevron-down" class="sport-icon-chevron"></i>
+            </button>
+            <div class="sports-dropdown-menu" id="moreSportsDropdown">
+              <button class="sports-dropdown-item" onclick="showSoonNotice('Festival'); toggleMoreSportsMenu();">
+                <span>Festival</span>
+                <span class="sport-soon-badge">segera</span>
+              </button>
+              <button class="sports-dropdown-item" onclick="showSoonNotice('MotoGP'); toggleMoreSportsMenu();">
+                <span>MotoGP</span>
+                <span class="sport-soon-badge">segera</span>
+              </button>
+              <button class="sports-dropdown-item" onclick="showSoonNotice('Bola Voli'); toggleMoreSportsMenu();">
+                <span>Bola Voli</span>
+                <span class="sport-soon-badge">segera</span>
+              </button>
+              <button class="sports-dropdown-item" onclick="showSoonNotice('Tenis Meja'); toggleMoreSportsMenu();">
+                <span>Tenis Meja</span>
+                <span class="sport-soon-badge">segera</span>
+              </button>
+              <button class="sports-dropdown-item" onclick="showSoonNotice('Biliar'); toggleMoreSportsMenu();">
+                <span>Biliar</span>
+                <span class="sport-soon-badge">segera</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-title-bar">
+          <div>
+            <span class="section-badge">Jadwal Pekan Ini</span>
+            <h2 class="section-title">Pertandingan Internasional & Tebak Skor Cepat</h2>
+            <p class="section-desc">Pilih pertandingan antar negara akbar lainnya dan pasang prediksimu untuk mengumpulkan poin ekstra.</p>
+          </div>
+          <button class="btn btn-outline" onclick="openJoinModal('Lihat Semua Jadwal')">Lihat Semua Jadwal &rarr;</button>
+        </div>
+
+        <!-- 4 Quick Predict Match Cards with Circle-Flags -->
+        <div class="matches-grid">
+          
+          <!-- Card 1: IDN vs VIE -->
+          <div class="match-quick-card">
+            <div class="quick-card-head">
+              <span class="league-pill pill-red"><i data-lucide="radio" class="live-dot-icon"></i> LIVE 20:00 WIB</span>
+              <span class="multiplier-tag">2x Booster</span>
+            </div>
+            <div class="quick-teams-row">
+              <div class="quick-team">
+                <img src="assets/flags/id.svg" alt="Indonesia" class="quick-flag-img" loading="lazy">
+                <span class="quick-team-name">Indonesia</span>
+              </div>
+              <span class="quick-vs-badge">VS</span>
+              <div class="quick-team">
+                <img src="assets/flags/vn.svg" alt="Vietnam" class="quick-flag-img" loading="lazy">
+                <span class="quick-team-name">Vietnam</span>
+              </div>
+            </div>
+            <div class="quick-meta-row">
+              <span class="quick-tournament-name">Kualifikasi PD 2026</span>
+              <span class="meta-points">+450 Pts</span>
+            </div>
+            <button class="btn btn-primary full-width" onclick="openJoinModal('Prediksi: Indonesia vs Vietnam')">Tebak Skor Laga Ini</button>
+          </div>
+
+          <!-- Card 2: ESP vs ARG -->
+          <div class="match-quick-card">
+            <div class="quick-card-head">
+              <span class="league-pill">Malam Ini 23:00</span>
+              <span class="multiplier-tag">2x Booster</span>
+            </div>
+            <div class="quick-teams-row">
+              <div class="quick-team">
+                <img src="assets/flags/es.svg" alt="Spanyol" class="quick-flag-img" loading="lazy">
+                <span class="quick-team-name">Spanyol</span>
+              </div>
+              <span class="quick-vs-badge">VS</span>
+              <div class="quick-team">
+                <img src="assets/flags/ar.svg" alt="Argentina" class="quick-flag-img" loading="lazy">
+                <span class="quick-team-name">Argentina</span>
+              </div>
+            </div>
+            <div class="quick-meta-row">
+              <span class="quick-tournament-name">Finalissima 2026</span>
+              <span class="meta-points">+500 Pts</span>
+            </div>
+            <button class="btn btn-outline full-width" onclick="openJoinModal('Prediksi: Spanyol vs Argentina')">Tebak Skor Laga Ini</button>
+          </div>
+
+          <!-- Card 3: CRO vs FRA -->
+          <div class="match-quick-card">
+            <div class="quick-card-head">
+              <span class="league-pill">Besok 02:00</span>
+              <span class="multiplier-tag">1.5x Booster</span>
+            </div>
+            <div class="quick-teams-row">
+              <div class="quick-team">
+                <img src="assets/flags/hr.svg" alt="Kroasia" class="quick-flag-img" loading="lazy">
+                <span class="quick-team-name">Kroasia</span>
+              </div>
+              <span class="quick-vs-badge">VS</span>
+              <div class="quick-team">
+                <img src="assets/flags/fr.svg" alt="Prancis" class="quick-flag-img" loading="lazy">
+                <span class="quick-team-name">Prancis</span>
+              </div>
+            </div>
+            <div class="quick-meta-row">
+              <span class="quick-tournament-name">UEFA Nations League</span>
+              <span class="meta-points">+420 Pts</span>
+            </div>
+            <button class="btn btn-outline full-width" onclick="openJoinModal('Prediksi: Kroasia vs Prancis')">Tebak Skor Laga Ini</button>
+          </div>
+
+          <!-- Card 4: ENG vs POR -->
+          <div class="match-quick-card">
+            <div class="quick-card-head">
+              <span class="league-pill">Lusa 02:00</span>
+              <span class="multiplier-tag">1.5x Booster</span>
+            </div>
+            <div class="quick-teams-row">
+              <div class="quick-team">
+                <img src="assets/flags/gb-eng.svg" alt="Inggris" class="quick-flag-img" loading="lazy">
+                <span class="quick-team-name">Inggris</span>
+              </div>
+              <span class="quick-vs-badge">VS</span>
+              <div class="quick-team">
+                <img src="assets/flags/pt.svg" alt="Portugal" class="quick-flag-img" loading="lazy">
+                <span class="quick-team-name">Portugal</span>
+              </div>
+            </div>
+            <div class="quick-meta-row">
+              <span class="quick-tournament-name">Laga Persahabatan</span>
+              <span class="meta-points">+400 Pts</span>
+            </div>
+            <button class="btn btn-outline full-width" onclick="openJoinModal('Prediksi: Inggris vs Portugal')">Tebak Skor Laga Ini</button>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 7. SECTION: APP PREVIEW & 3 SMARTPHONE MOCKUPS -->
+    <section class="section-clean bg-subtle" id="app-preview">
+      <div class="container">
+        
+        <div class="app-showcase-split">
+          <!-- Left: 3 Steps Guide -->
+          <div class="app-guide-content">
+            <span class="section-badge">Panduan Ringkas</span>
+            <h2 class="section-title">Mudah & Cepat: Pasang Tebak Skor Sekarang</h2>
+            <p class="section-desc">
+              Aplikasi web Raja Nobar dirancang responsif dan ringan untuk perangkat ponsel pintar Anda. Semua menu dapat diakses dengan cepat hanya dalam hitungan detik.
+            </p>
+
+            <div class="guide-steps-column">
+              <div class="guide-step-card">
+                <div class="step-badge-number">1</div>
+                <div>
+                  <strong class="step-card-title">Gabung Komunitas & Klub Favorit</strong>
+                  <p class="step-card-desc">Pilih komunitas penggemar tim favoritmu di seluruh Indonesia untuk nobar bersama.</p>
+                </div>
+              </div>
+
+              <div class="guide-step-card">
+                <div class="step-badge-number">2</div>
+                <div>
+                  <strong class="step-card-title">Prediksi Hasil & Tebak Skor</strong>
+                  <p class="step-card-desc">Pilih laga big match, tentukan pilihan analisismu, dan kunci skor sebelum kick-off.</p>
+                </div>
+              </div>
+
+              <div class="guide-step-card">
+                <div class="step-badge-number">3</div>
+                <div>
+                  <strong class="step-card-title">Program Referral & Kumpulkan Poin</strong>
+                  <p class="step-card-desc">Ajak kawan nobar untuk upgrade otomatis ke Silver Royale dan kumpulkan poin ekstra.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide-action-wrap">
+              <button class="btn btn-primary btn-lg" onclick="openJoinModal('Panduan App')">
+                Mulai Tebak Skor Sekarang
+              </button>
+            </div>
+          </div>
+
+          <!-- Right: 3 Smartphone Mockups Asli (Downloaded from rajanobar.id) -->
+          <div class="phones-trio-wrap">
+            
+            <!-- Phone 1: Komunitas & Klub -->
+            <div class="phone-frame-item phone-left">
+              <img src="assets/phone_step1.png" alt="Aplikasi Komunitas Klub Raja Nobar" class="phone-screen-img" loading="lazy">
+            </div>
+
+            <!-- Phone 2: Prediksi Pertandingan (Center Elevated) -->
+            <div class="phone-frame-item phone-center">
+              <img src="assets/phone_step2.png" alt="Aplikasi Tebak Skor Raja Nobar" class="phone-screen-img" loading="lazy">
+            </div>
+
+            <!-- Phone 3: Referral & Poin Member -->
+            <div class="phone-frame-item phone-right">
+              <img src="assets/phone_step3.png" alt="Aplikasi Referral dan Poin Raja Nobar" class="phone-screen-img" loading="lazy">
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 8. MID-PAGE TRANSITION BANNER -->
+    <section class="mid-transition-banner">
+      <div class="container mid-transition-inner">
+        <div class="mid-transition-text">
+          <span class="transition-pill">Pesta Bola Dunia 2026</span>
+          <h2 class="transition-heading">Jadilah Bagian dari Komunitas Nobar Terbesar di Indonesia</h2>
+          <p class="transition-lead">Ikuti ribuan suporter lainnya, nikmati setiap gol, dan buktikan analisismu sekarang juga.</p>
+        </div>
+        <div class="mid-transition-action">
+          <button class="btn btn-banner-cta" onclick="openJoinModal('Banner Tengah')">
+            Gabung Sekarang - Gratis
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. BENTO GRID STRATEGI & ANALISIS -->
+    <section class="section-clean" id="strategi">
+      <div class="container">
+        
+        <div class="section-title-wrap">
+          <span class="section-badge">Fitur Unggulan</span>
+          <h2 class="section-title">Tebak dengan Tepat, Mainkan Strategi Terdepan</h2>
+          <p class="section-desc">
+            Gunakan data statistik, analisis mendalam, dan booster poin strategis untuk meraih lebih banyak poin di setiap pertandingan.
+          </p>
+        </div>
+
+        <div class="bento-sports-grid">
+          
+          <!-- Card 1: Data & Analisis (50% Width) -->
+          <div class="bento-item">
+            <div class="bento-item-header">
+              <div class="bento-icon-wrapper">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#005a36" stroke-width="2">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                  <path d="M7 10l3-3 3 3 4-4"></path>
+                </svg>
+              </div>
+              <span class="bento-badge-live">Data Real-Time</span>
+            </div>
+
+            <div class="bento-card-body">
+              <h3 class="bento-headline">Analisis Pertandingan Mendalam</h3>
+              <p class="bento-paragraph">
+                Akses tren 5 laga terakhir, probabilitas kemenangan head-to-head, dan data performa tim untuk tebakan skor yang lebih terukur.
+              </p>
+            </div>
+
+            <!-- Mini Match Analytics Preview Widget -->
+            <div class="bento-mini-widget stats-widget">
+              <div class="widget-fixture-head">
+                <div class="widget-team-tag"><img src="assets/flags/id.svg" alt="IDN" class="widget-flag"> <span>Indonesia</span></div>
+                <span class="widget-h2h-label">Probabilitas Menang</span>
+                <div class="widget-team-tag"><img src="assets/flags/vn.svg" alt="VIE" class="widget-flag"> <span>Vietnam</span></div>
+              </div>
+              
+              <div class="widget-prob-bar">
+                <div class="prob-fill-team1" style="width: 64%;">64%</div>
+                <div class="prob-fill-team2" style="width: 36%;">36%</div>
+              </div>
+
+              <div class="widget-form-row">
+                <span class="form-title">Tren 5 Laga:</span>
+                <div class="form-badges">
+                  <span class="badge-win">W</span>
+                  <span class="badge-win">W</span>
+                  <span class="badge-draw">D</span>
+                  <span class="badge-win">W</span>
+                  <span class="badge-win">W</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Strategi Booster (50% Width) -->
+          <div class="bento-item">
+            <div class="bento-item-header">
+              <div class="bento-icon-wrapper icon-red">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
+              </div>
+              <span class="bento-badge-boost">Pengali 2x Poin</span>
+            </div>
+
+            <div class="bento-card-body">
+              <h3 class="bento-headline">Strategi Booster Poin</h3>
+              <p class="bento-paragraph">
+                Aktifkan pengali skor pada laga big match yang kamu yakini untuk melipatgandakan poin kemenanganmu di klasemen.
+              </p>
+            </div>
+
+            <!-- Booster Simulation Widget -->
+            <div class="bento-mini-widget booster-widget">
+              <div class="booster-pill-status">
+                <strong><i data-lucide="zap" class="booster-badge-icon"></i> BOOSTER 2.0x AKTIF</strong>
+              </div>
+              <div class="booster-calc-row">
+                <div class="calc-col">
+                  <span class="calc-label">Poin Normal</span>
+                  <span class="calc-val-dim">+300 Pts</span>
+                </div>
+                <div class="calc-arrow-divider">&rarr;</div>
+                <div class="calc-col">
+                  <span class="calc-label">Dengan Booster</span>
+                  <span class="calc-val-highlight">+600 Pts</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Hadiah Mingguan (50% Width) -->
+          <div class="bento-item">
+            <div class="bento-item-header">
+              <div class="bento-icon-wrapper icon-gold">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2">
+                  <polyline points="20 12 20 22 4 22 4 12"></polyline>
+                  <rect x="2" y="7" width="20" height="5"></rect>
+                  <line x1="12" y1="22" x2="12" y2="7"></line>
+                  <path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path>
+                  <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path>
+                </svg>
+              </div>
+              <span class="bento-badge-reward">Diumumkan Tiap Senin</span>
+            </div>
+
+            <div class="bento-card-body">
+              <h3 class="bento-headline">Reward Mingguan & Musiman</h3>
+              <p class="bento-paragraph">
+                Bukan hanya juara musim, peserta peringkat teratas setiap minggu berhak mendapatkan jersey resmi dan saldo e-wallet.
+              </p>
+            </div>
+
+            <!-- Weekly Prize Items Preview -->
+            <div class="bento-mini-widget reward-widget">
+              <div class="reward-item-row">
+                <span class="reward-icon"><i data-lucide="shirt"></i></span>
+                <div class="reward-info">
+                  <strong class="reward-name">Jersey Original Timnas 2026</strong>
+                  <span class="reward-sub">Peringkat 1-3 Pekan Ini</span>
+                </div>
+              </div>
+              <div class="reward-item-row">
+                <span class="reward-icon"><i data-lucide="credit-card"></i></span>
+                <div class="reward-info">
+                  <strong class="reward-name">Saldo E-Wallet Rp 500.000</strong>
+                  <span class="reward-sub">Peringkat 4-10 Pekan Ini</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Komunitas Nobar Terbesar (50% Width) -->
+          <div class="bento-item" id="komunitas">
+            <div class="bento-item-header">
+              <div class="bento-icon-wrapper">
+                <i data-lucide="users"></i>
+              </div>
+              <span class="bento-badge-live">50+ Kota di Indonesia</span>
+            </div>
+
+            <div class="bento-card-body">
+              <h3 class="bento-headline">Komunitas Nobar Terbesar</h3>
+              <p class="bento-paragraph">
+                Bergabunglah dengan puluhan ribu suporter sepak bola di venue partner resmi dengan reservasi kursi VIP gratis.
+              </p>
+            </div>
+
+            <!-- Community Snapshot Widget -->
+            <div class="bento-mini-widget community-widget" id="venue">
+              <div class="comm-stats-head">
+                <div class="comm-avatar-stack">
+                  <span class="comm-avatar" style="background-color: #005a36;">ID</span>
+                  <span class="comm-avatar" style="background-color: #dc2626;">BS</span>
+                  <span class="comm-avatar" style="background-color: #1e40af;">RK</span>
+                  <span class="comm-avatar" style="background-color: #d97706;">DP</span>
+                </div>
+                <div class="comm-count-text">
+                  <strong>50.000+ Suporter Aktif</strong>
+                  <span>Tersebar di 50+ Kota</span>
+                </div>
+              </div>
+
+              <div class="comm-cities-tags">
+                <span class="city-tag"><i data-lucide="map-pin"></i> Jakarta</span>
+                <span class="city-tag"><i data-lucide="map-pin"></i> Surabaya</span>
+                <span class="city-tag"><i data-lucide="map-pin"></i> Bandung</span>
+                <span class="city-tag"><i data-lucide="map-pin"></i> Medan</span>
+                <span class="city-tag"><i data-lucide="map-pin"></i> Bali</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 10. PRIZEPOOL HADIAH MUSIM 2026 -->
+    <section class="section-clean bg-subtle" id="prizepool">
+      <div class="container">
+        
+        <div class="section-title-wrap">
+          <h2 class="section-title">Prizepool Musim 2026</h2>
+          <p class="section-desc">
+            Seluruh hadiah bergaransi resmi Indonesia. Biaya pengiriman dan asuransi ditanggung penuh oleh Raja Nobar.
+          </p>
+
+          <div class="tab-filter-bar" role="tablist">
+            <button class="tab-filter-btn active" onclick="switchPrizePool('novice')" id="tabNovice" role="tab" aria-selected="true">
+              Tier Novice & Silver
+            </button>
+            <button class="tab-filter-btn" onclick="switchPrizePool('gold')" id="tabGold" role="tab" aria-selected="false">
+              Tier Gold & Master
+            </button>
+          </div>
+        </div>
+
+        <!-- Top 3 Product Cards -->
+        <div class="podium-cards-grid">
+          
+          <!-- Rank 1: First Place Champion -->
+          <div class="product-prize-card champion-highlight">
+            <div class="prize-badge-rank rank-gold">Peringkat 1</div>
+            <div class="product-image-frame">
+              <img src="assets/prize_rank1.jpg" alt="Samsung Galaxy S24 Ultra" class="product-photo" loading="lazy">
+            </div>
+            <div class="product-details">
+              <h3 class="product-name">Samsung Galaxy S24 Ultra</h3>
+              <p class="product-specs">Titanium Grey • 512GB • Garansi Resmi SEIN</p>
+              <div class="product-bonus-line">Termasuk Trophy Raja Nobar & Tiket VIP Final</div>
+            </div>
+          </div>
+
+          <!-- Rank 2: Second Place -->
+          <div class="product-prize-card">
+            <div class="prize-badge-rank rank-silver">Peringkat 2</div>
+            <div class="product-image-frame">
+              <img src="assets/prize_rank2.jpg" alt="Tablet Layar Retina Flagship" class="product-photo" loading="lazy">
+            </div>
+            <div class="product-details">
+              <h3 class="product-name">Tablet Flagship Modern</h3>
+              <p class="product-specs">Layar 10.9 Inci • 64GB Silver Edition</p>
+              <div class="product-bonus-line">Termasuk Jersey Original Timnas Pilihan</div>
+            </div>
+          </div>
+
+          <!-- Rank 3: Third Place -->
+          <div class="product-prize-card">
+            <div class="prize-badge-rank rank-bronze">Peringkat 3</div>
+            <div class="product-image-frame">
+              <img src="assets/prize_rank3.jpg" alt="Smartwatch Sport Edition" class="product-photo" loading="lazy">
+            </div>
+            <div class="product-details">
+              <h3 class="product-name">Smartwatch Sport Edition</h3>
+              <p class="product-specs">AMOLED Display • GPS Fitness Tracking</p>
+              <div class="product-bonus-line">Termasuk Official Supporter Hoodie</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Collapsible Table for Rank 4 - 15 -->
+        <div class="extra-prizes-accordion">
+          <div class="extra-prizes-header">
+            <div>
+              <strong class="extra-title">Daftar Hadiah Peringkat 4 hingga 15</strong>
+              <p class="extra-desc">Masih tersedia 12 hadiah resmi lainnya untuk peserta peringkat teratas mingguan.</p>
+            </div>
+            <button class="btn btn-outline" id="togglePrizepoolBtn" onclick="toggleExtraPrizes()">
+              <span id="togglePrizepoolText">Buka Rincian Peringkat 4-15</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="toggleIcon">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+          </div>
+
+          <div class="prizepool-table-drawer" id="prizepoolDrawer">
+            <div class="table-scroll-wrap">
+              <table class="prizepool-data-table">
+                <thead>
+                  <tr>
+                    <th scope="col" style="width: 170px; white-space: nowrap;">Peringkat</th>
+                    <th scope="col">Nama Hadiah</th>
+                    <th scope="col" style="width: 170px;">Kategori</th>
+                    <th scope="col" style="width: 130px; white-space: nowrap;">Jumlah Unit</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Peringkat 4</strong></td>
+                    <td>Smart TV 43 Inci 4K UHD + Bracket</td>
+                    <td>Elektronik Rumah</td>
+                    <td>1 Unit</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Peringkat 5</strong></td>
+                    <td>Soundbar Home Theater Surround</td>
+                    <td>Audio & Suara</td>
+                    <td>1 Unit</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Peringkat 6 - 8</strong></td>
+                    <td>Jersey Original Timnas Peserta PD 2026 (Bisa Pilih)</td>
+                    <td>Merchandise Resmi</td>
+                    <td>3 Unit</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Peringkat 9 - 10</strong></td>
+                    <td>Jaket Bomber Resmi Raja Nobar Supporter</td>
+                    <td>Apparel</td>
+                    <td>2 Unit</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Peringkat 11 - 15</strong></td>
+                    <td>Saldo E-Wallet Rp 500.000 + Tumbler Stainless</td>
+                    <td>Saldo Digital</td>
+                    <td>5 Pemenang</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 11. PAKET KEANGGOTAAN 4 TIER + TROFI PIALA DUNIA 3D -->
+    <section class="section-clean" id="membership">
+      <div class="container">
+        
+        <div class="section-title-wrap">
+          <span class="section-badge">Keanggotaan Raja Nobar</span>
+          <h2 class="section-title">Maksimalkan Pengalaman Nobar Anda</h2>
+          <p class="section-desc">
+            Pilih paket keanggotaan yang sesuai dengan kebutuhan analisismu. Tersedia pilihan gratis hingga pass turnamen akbar.
+          </p>
+        </div>
+
+        <!-- 4 Symmetrical Membership Cards with Tiered Badges -->
+        <div class="membership-cards-grid">
+          
+          <!-- Tier 1: Novice -->
+          <div class="membership-card">
+            <div class="m-card-head">
+              <div class="m-head-meta">
+                <span class="m-tag">TINGKAT DASAR</span>
+                <div class="m-tier-badge m-tier-novice" title="Tier Novice">
+                  <i data-lucide="wind"></i>
+                </div>
+              </div>
+              <h3 class="m-title">Novice</h3>
+              <p class="m-desc">Cocok untuk suporter yang ingin mencoba prediksi laga harian tanpa komitmen.</p>
+              <div class="m-pricing">
+                <span class="m-amount">Rp 0</span>
+                <span class="m-term">Gratis Selamanya</span>
+              </div>
+            </div>
+            <ul class="m-perks-list">
+              <li><span class="m-check"><i data-lucide="check"></i></span> <span class="m-text"><strong>1 Tiket tebak skor</strong> per hari</span></li>
+              <li><span class="m-check"><i data-lucide="check"></i></span> <span class="m-text">Poin klasemen standar (1x)</span></li>
+              <li><span class="m-check"><i data-lucide="check"></i></span> <span class="m-text">Akses nobar reguler offline</span></li>
+              <li><span class="m-check"><i data-lucide="check"></i></span> <span class="m-text">Live chat forum suporter</span></li>
+            </ul>
+            <button class="btn btn-outline full-width" onclick="openJoinModal('Daftar Novice')">Pilih Novice</button>
+          </div>
+
+          <!-- Tier 2: Silver Royale (Highlighted / Referral Free) -->
+          <div class="membership-card m-featured">
+            <div class="m-featured-ribbon">PALING DIMINATI • BISA GRATIS</div>
+            <div class="m-card-head">
+              <div class="m-head-meta">
+                <span class="m-tag">REKOMENDASI SUPORTER</span>
+                <div class="m-tier-badge m-tier-silver" title="Tier Silver">
+                  <i data-lucide="sparkles"></i>
+                </div>
+              </div>
+              <h3 class="m-title">Silver Royale</h3>
+              <p class="m-desc">Pilihan terbaik suporter aktif. Akses gratis cukup dengan mengajak 5 kawan nobar.</p>
+              <div class="m-pricing">
+                <span class="m-amount">Gratis*</span>
+                <span class="m-sub-note">Cukup undang 5 teman aktif</span>
+              </div>
+            </div>
+            <ul class="m-perks-list">
+              <li><span class="m-check"><i data-lucide="check"></i></span> <span class="m-text"><strong>3 Tiket tebak skor</strong> per hari</span></li>
+              <li><span class="m-check"><i data-lucide="check"></i></span> <span class="m-text"><strong>1.5x Multiplier poin</strong> permanen</span></li>
+              <li><span class="m-check"><i data-lucide="check"></i></span> <span class="m-text"><strong>Akses hadiah gadget</strong> mingguan</span></li>
+              <li><span class="m-check"><i data-lucide="check"></i></span> <span class="m-text">Prioritas reservasi seat venue nobar</span></li>
+              <li><span class="m-check"><i data-lucide="check"></i></span> <span class="m-text">Badge Silver resmi di leaderboard</span></li>
+            </ul>
+            <button class="btn btn-primary full-width" onclick="openJoinModal('Daftar Silver')">Ambil Silver Royale</button>
+          </div>
+
+          <!-- Tier 3: Gold Master -->
+          <div class="membership-card">
+            <div class="m-card-head">
+              <div class="m-head-meta">
+                <span class="m-tag">PRO SUPPORTER</span>
+                <div class="m-tier-badge m-tier-gold" title="Tier Gold">
+                  <i data-lucide="star"></i>
+                </div>
+              </div>
+              <h3 class="m-title">Gold Master</h3>
+              <p class="m-desc">Bagi analis dan suporter sejati yang menargetkan podium hadiah musim akbar.</p>
+              <div class="m-pricing">
+                <span class="m-amount">Rp 500.000</span>
+                <span class="m-term">Per Musim Turnamen</span>
+              </div>
+            </div>
+            <ul class="m-perks-list">
+              <li><span class="m-check"><i data-lucide="check"></i></span> <span class="m-text"><strong>5 Tiket tebak skor</strong> per hari</span></li>
+              <li><span class="m-check"><i data-lucide="check"></i></span> <span class="m-text"><strong>2x Multiplier poin</strong> klasemen</span></li>
+              <li><span class="m-check"><i data-lucide="check"></i></span> <span class="m-text">Akses penuh prizepool 15 pemenang</span></li>
+              <li><span class="m-check"><i data-lucide="check"></i></span> <span class="m-text"><strong>Gratis 1 Jersey Timnas</strong> (Bebas Pilih)</span></li>
+              <li><span class="m-check"><i data-lucide="check"></i></span> <span class="m-text">Akses VIP Lounge venue nobar partner</span></li>
+            </ul>
+            <button class="btn btn-outline full-width" onclick="openJoinModal('Daftar Gold')">Pilih Gold Master</button>
+          </div>
+
+          <!-- Tier 4: Platinum VIP -->
+          <div class="membership-card">
+            <div class="m-card-head">
+              <div class="m-head-meta">
+                <span class="m-tag">ELITE SUPPORTER</span>
+                <div class="m-tier-badge m-tier-platinum" title="Tier Platinum">
+                  <i data-lucide="crown"></i>
+                </div>
+              </div>
+              <h3 class="m-title">Platinum VIP</h3>
+              <p class="m-desc">Akses tanpa batas, fasilitas VIP lounge, dan peluang tiket pertandingan langsung.</p>
+              <div class="m-pricing">
+                <span class="m-amount">Rp 1.000.000</span>
+                <span class="m-term">Per Musim Turnamen</span>
+              </div>
+            </div>
+            <ul class="m-perks-list">
+              <li><span class="m-check"><i data-lucide="check"></i></span> <span class="m-text"><strong>Tiket tebak skor tanpa batas</strong></span></li>
+              <li><span class="m-check"><i data-lucide="check"></i></span> <span class="m-text"><strong>3x Multiplier poin booster</strong></span></li>
+              <li><span class="m-check"><i data-lucide="check"></i></span> <span class="m-text">Undangan nobar akbar VIP + Konsumsi</span></li>
+              <li><span class="m-check"><i data-lucide="check"></i></span> <span class="m-text">Official Merch Pack lengkap eksklusif</span></li>
+              <li><span class="m-check"><i data-lucide="check"></i></span> <span class="m-text">Peluang undian tiket nonton langsung</span></li>
+            </ul>
+            <button class="btn btn-outline full-width" onclick="openJoinModal('Daftar Platinum')">Pilih Platinum VIP</button>
+          </div>
+
+        </div>
+
+        <div class="membership-footnote">
+          <span>* Syarat & Ketentuan berlaku. Bebas upgrade atau batalkan kapan saja. Pembayaran aman via QRIS, Virtual Account, & E-Wallet resmi.</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 12. STANDAR TRANSPARANSI (4 Fitur) -->
+    <section class="section-clean bg-subtle" id="keunggulan">
+      <div class="container">
+        <div class="section-title-wrap">
+          <h2 class="section-title">Standar Transparansi & Fair Play</h2>
+          <p class="section-desc">Komitmen kami untuk menyajikan kompetisi tebak skor yang bersih dan dapat dipertanggungjawabkan.</p>
+        </div>
+
+        <div class="trust-pillars-grid">
+          <div class="pillar-card">
+            <div class="pillar-number">01</div>
+            <h3 class="pillar-title">Verifikasi Nomor Ponsel</h3>
+            <p class="pillar-desc">Mencegah manipulasi akun ganda dan bot otomatis agar persaingan di leaderboard berjalan murni.</p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-number">02</div>
+            <h3 class="pillar-title">Poin Otomatis Real-Time</h3>
+            <p class="pillar-desc">Terhubung langsung dengan penyedia data pertandingan internasional begitu peluit panjang berakhir.</p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-number">03</div>
+            <h3 class="pillar-title">Klasemen Terbuka</h3>
+            <p class="pillar-desc">Riwayat tebakan dan total perolehan poin seluruh peserta dapat dilihat dan diaudit secara terbuka.</p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-number">04</div>
+            <h3 class="pillar-title">Pengiriman Bergaransi</h3>
+            <p class="pillar-desc">Hadiah dikirim menggunakan ekspedisi resmi berasuransi dengan nomor resi terverifikasi.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 13. FAQ ACCORDION -->
+    <section class="section-clean" id="faq">
+      <div class="container max-w-readable">
+        <div class="section-title-wrap">
+          <h2 class="section-title">Pertanyaan Umum</h2>
+          <p class="section-desc">Hal-hal yang sering ditanyakan seputar cara bermain dan penerimaan hadiah.</p>
+        </div>
+
+        <div class="faq-accordion-group">
+          <div class="faq-accordion-item">
+            <button class="faq-accordion-toggle" aria-expanded="false" onclick="toggleFaq(this)">
+              <span>Apakah mengikuti tebak skor ini dipungut biaya?</span>
+              <span class="faq-plus-icon" aria-hidden="true">&plus;</span>
+            </button>
+            <div class="faq-accordion-body">
+              <p>
+                Sama sekali tidak. Pendaftaran akun, keikutsertaan prediksi setiap pertandingan, dan klaim hadiah 100% gratis tanpa dipungut biaya deposit apa pun.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-accordion-item">
+            <button class="faq-accordion-toggle" aria-expanded="false" onclick="toggleFaq(this)">
+              <span>Bagaimana mekanisme penilaian poin tebak skor?</span>
+              <span class="faq-plus-icon" aria-hidden="true">&plus;</span>
+            </button>
+            <div class="faq-accordion-body">
+              <p>
+                Poin dinilai dari ketepatan analisismu:
+                <br>• Tebak skor akhir tepat: +300 poin
+                <br>• Tebak hasil akhir (Menang/Seri/Kalah): +150 poin
+                <br>• Pencetak gol pertama akurat: +100 poin bonus
+                <br>• 2x Booster Poin: Mengalikan dua seluruh poin yang diperoleh dari pertandingan tersebut.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-accordion-item">
+            <button class="faq-accordion-toggle" aria-expanded="false" onclick="toggleFaq(this)">
+              <span>Kapan pemenang dihubungi dan hadiah dikirim?</span>
+              <span class="faq-plus-icon" aria-hidden="true">&plus;</span>
+            </button>
+            <div class="faq-accordion-body">
+              <p>
+                Pengumuman pemenang dilakukan setiap hari Senin pukul 12:00 WIB melalui Leaderboard resmi. Tim kami akan menghubungi pemenang via WhatsApp resmi untuk validasi alamat dan pengiriman unit hadiah dalam waktu maksimal 3 hari kerja.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-accordion-item">
+            <button class="faq-accordion-toggle" aria-expanded="false" onclick="toggleFaq(this)">
+              <span>Bagaimana cara mengikuti kegiatan nonton bareng offline?</span>
+              <span class="faq-plus-icon" aria-hidden="true">&plus;</span>
+            </button>
+            <div class="faq-accordion-body">
+              <p>
+                Daftar cafe dan venue partner resmi diumumkan di dashboard member setiap jelang akhir pekan. Member berstatus Silver Royale mendapatkan kursi khusus yang dapat direservasi lebih awal.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 14. BOTTOM CTA STRIP -->
+    <section class="bottom-cta-banner">
+      <div class="container bottom-cta-inner">
+        <div>
+          <h2 class="bottom-cta-title">Kunci prediksimu untuk pertandingan malam ini</h2>
+          <p class="bottom-cta-lead">Daftar sekarang dan nikmati sensasi nobar resmi bersama ribuan peserta lainnya.</p>
+        </div>
+        <div class="bottom-cta-action">
+          <button class="btn btn-primary btn-lg" onclick="openJoinModal('CTA Bawah')">Daftar Akun Gratis</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 15. SITE FOOTER DENGAN STRUKTUR: BRAND [JUSTIFY-BETWEEN] NAVIGASI KOMPETISI KONTAK -->
+  <footer class="site-footer">
+    <div class="container footer-content-grid">
+      <div class="footer-columns-wrap">
+        
+        <!-- Sisi Kiri: Brand & Logo Resmi -->
+        <div class="footer-brand-column">
+          <img src="assets/Logo.png" alt="Raja Nobar Indonesia" class="footer-brand-logo" loading="lazy">
+          <p class="footer-brand-text">
+            RAJA NOBAR INDONESIA adalah platform pengalaman voting sepakbola. Nikmati keseruan Piala Dunia 2026 bersama komunitasmu di Rajanobar.id
+          </p>
+        </div>
+
+        <!-- Sisi Kanan: Klaster Menu (Navigasi + Kompetisi + Kontak) -->
+        <div class="footer-links-group">
+          
+          <!-- Kolom Navigasi (Grid 2-Kolom) -->
+          <div class="footer-links-column footer-nav-column">
+            <span class="footer-heading-tag">Navigasi</span>
+            <ul class="footer-nav-grid">
+              <li><a href="#simulator">Pertandingan</a></li>
+              <li><a href="#prizepool">Prizepool</a></li>
+              <li><a href="#jadwal">Jadwal</a></li>
+              <li><a href="#membership">Membership</a></li>
+              <li><a href="#top-teams">Tim</a></li>
+              <li><a href="#faq">FAQ</a></li>
+              <li><a href="#venue">Venue</a></li>
+              <li><a href="#komunitas">Komunitas</a></li>
+              <li><a href="#app-preview">Aplikasi</a></li>
+            </ul>
+          </div>
+
+          <!-- Kolom Kompetisi -->
+          <div class="footer-links-column">
+            <span class="footer-heading-tag">Kompetisi</span>
+            <ul>
+              <li><a href="#jadwal">Kualifikasi Piala Dunia 2026</a></li>
+              <li><a href="#jadwal">Putaran Final Piala Dunia</a></li>
+              <li><a href="#jadwal">UEFA Nations League</a></li>
+              <li><a href="#jadwal">Piala Asia AFC</a></li>
+            </ul>
+          </div>
+
+          <!-- Kolom Kontak Resmi -->
+          <div class="footer-contact-column">
+            <span class="footer-heading-tag footer-contact-heading">Kontak</span>
+            
+            <div class="footer-contact-details">
+              <strong class="footer-contact-company">PT RAJA NOBAR INDONESIA</strong>
+              <address class="footer-contact-address">
+                Indonesia Stock Exchange Tower 1<br>
+                Level 3 Unit 304, SCBD<br>
+                Jalan Jenderal Sudirman Kav 52-53<br>
+                Jakarta 12190 Indonesia
+              </address>
+
+              <div class="footer-contact-links">
+                <a href="tel:02130620200" class="footer-contact-link">
+                  <i data-lucide="phone" class="footer-contact-icon"></i>
+                  <span>021 3062 0200</span>
+                </a>
+                <a href="mailto:pilih@rajanobar.id" class="footer-contact-link">
+                  <i data-lucide="mail" class="footer-contact-icon"></i>
+                  <span>pilih@rajanobar.id</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="footer-bottom-legal">
+        <p>&copy; 2026 PT Raja Nobar Indonesia. Hak cipta dilindungi undang-undang.</p>
+        <p class="legal-note">Platform olahraga hiburan komunitas resmi.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Clean Modal: Pendaftaran Akun -->
+  <div class="modal-overlay" id="joinModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="closeJoinModal()" aria-label="Tutup Dialog">&times;</button>
+      
+      <div class="modal-header-block">
+        <h3 class="modal-main-title" id="modalTitle">Daftar Akun Raja Nobar</h3>
+        <p class="modal-main-sub" id="modalSubtitle">
+          Buat akun dalam 30 detik untuk mengamankan tiket prediksi dan booster poin harianmu.
+        </p>
+      </div>
+
+      <form class="modal-form-wrap" id="registrationForm" onsubmit="handleFormSubmit(event)">
+        <div class="input-group">
+          <label for="inputName">Nama Lengkap</label>
+          <input type="text" id="inputName" placeholder="Contoh: Pratama Arhan" required autocomplete="name">
+        </div>
+
+        <div class="input-group">
+          <label for="inputPhone">Nomor WhatsApp</label>
+          <input type="tel" id="inputPhone" placeholder="Contoh: 081234567890" required autocomplete="tel">
+          <span class="input-help">Digunakan khusus untuk verifikasi pengiriman hadiah jika menang.</span>
+        </div>
+
+        <div class="input-group">
+          <label for="inputTeam">Tim Nasional Favorit</label>
+          <select id="inputTeam" class="form-select-clean">
+            <option value="Timnas Indonesia">Timnas Indonesia</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Spanyol">Spanyol</option>
+            <option value="Brasil">Brasil</option>
+            <option value="Jepang">Jepang</option>
+            <option value="Jerman">Jerman</option>
+            <option value="Inggris">Inggris</option>
+            <option value="Negara Lainnya">Negara Lainnya</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg full-width">
+          Selesaikan Pendaftaran
+        </button>
+      </form>
+
+      <div class="modal-bottom-note">
+        Data kamu dijaga kerahasiaannya. 100% bebas biaya dan tanpa deposit.
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-popup" id="toast" role="status" aria-live="polite">
+    <div class="toast-indicator"></div>
+    <div class="toast-message-wrap">
+      <strong id="toastTitle">Berhasil</strong>
+      <span id="toastMessage">Prediksi skormu telah tersimpan.</span>
+    </div>
+  </div>
+
+  <script src="assets/lucide.min.js"></script>
+  <script src="assets/gsap.min.js"></script>
+  <script src="assets/ScrollTrigger.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
