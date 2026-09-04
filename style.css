@@ -198,13 +198,21 @@ ul {
 }
 
 .section-badge {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   font-size: var(--text-xs);
   font-weight: 700;
   color: var(--color-brand-green);
   text-transform: uppercase;
   letter-spacing: 0.08em;
   margin-bottom: var(--space-2);
+}
+
+.section-badge i,
+.section-badge svg {
+  width: 13px;
+  height: 13px;
+  margin-right: 5px;
 }
 
 .badge-count-note {
@@ -2835,7 +2843,8 @@ ul {
   flex-shrink: 0;
 }
 
-.venue-stat-icon i {
+.venue-stat-icon i,
+.venue-stat-icon svg {
   width: 20px;
   height: 20px;
 }
@@ -2961,9 +2970,10 @@ ul {
   gap: 6px;
 }
 
-.venue-featured-badge i {
-  width: 14px;
-  height: 14px;
+.venue-featured-badge i,
+.venue-featured-badge svg {
+  width: 13px;
+  height: 13px;
 }
 
 .venue-featured-pill {
@@ -2980,6 +2990,12 @@ ul {
   display: inline-flex;
   align-items: center;
   gap: 6px;
+}
+
+.venue-featured-pill i,
+.venue-featured-pill svg {
+  width: 13px;
+  height: 13px;
 }
 
 .venue-card-body {
@@ -3009,12 +3025,13 @@ ul {
   border-radius: var(--radius-xs);
   display: inline-flex;
   align-items: center;
-  gap: 4px;
+  gap: 5px;
 }
 
-.venue-city-tag i {
-  width: 12px;
-  height: 12px;
+.venue-city-tag i,
+.venue-city-tag svg {
+  width: 11px;
+  height: 11px;
 }
 
 .venue-status-tag {
@@ -3026,7 +3043,13 @@ ul {
   border-radius: var(--radius-xs);
   display: inline-flex;
   align-items: center;
-  gap: 4px;
+  gap: 5px;
+}
+
+.venue-status-tag i,
+.venue-status-tag svg {
+  width: 12px;
+  height: 12px;
 }
 
 .venue-title {
@@ -3047,11 +3070,12 @@ ul {
   line-height: 1.4;
 }
 
-.venue-address i {
+.venue-address i,
+.venue-address svg {
   flex-shrink: 0;
   margin-top: 2px;
-  width: 14px;
-  height: 14px;
+  width: 13px;
+  height: 13px;
   color: var(--color-brand-green);
 }
 
@@ -3076,10 +3100,12 @@ ul {
   gap: 6px;
 }
 
-.venue-match-title i {
+.venue-match-title i,
+.venue-match-title svg {
   width: 14px;
   height: 14px;
   color: var(--color-accent-red);
+  flex-shrink: 0;
 }
 
 .venue-match-time {
@@ -3135,7 +3161,7 @@ ul {
 }
 
 .venue-facility-chip {
-  font-size: 0.68rem;
+  font-size: 0.7rem;
   font-weight: 500;
   color: var(--color-text-body);
   background-color: var(--color-bg-subtle);
@@ -3144,13 +3170,17 @@ ul {
   border-radius: var(--radius-xs);
   display: inline-flex;
   align-items: center;
-  gap: 4px;
+  gap: 5px;
+  line-height: 1.2;
 }
 
-.venue-facility-chip i {
+.venue-facility-chip i,
+.venue-facility-chip svg {
   width: 12px;
   height: 12px;
   color: var(--color-brand-green);
+  flex-shrink: 0;
+  stroke-width: 2.2;
 }
 
 .venue-card-actions {
@@ -3158,6 +3188,14 @@ ul {
   grid-template-columns: 1fr auto;
   gap: var(--space-2);
   margin-top: auto;
+}
+
+.venue-card-actions .btn i,
+.venue-card-actions .btn svg {
+  width: 13px;
+  height: 13px;
+  margin-right: 2px;
+  vertical-align: -1px;
 }
 
 /* Nobar Event Details & Guidelines Container */
@@ -3211,9 +3249,10 @@ ul {
   gap: 6px;
 }
 
-.nobar-rundown-title i {
-  width: 16px;
-  height: 16px;
+.nobar-rundown-title i,
+.nobar-rundown-title svg {
+  width: 15px;
+  height: 15px;
 }
 
 .nobar-timeline {
@@ -3301,7 +3340,8 @@ ul {
   flex-shrink: 0;
 }
 
-.nobar-guide-icon i {
+.nobar-guide-icon i,
+.nobar-guide-icon svg {
   width: 18px;
   height: 18px;
 }
