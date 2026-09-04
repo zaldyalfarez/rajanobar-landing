@@ -964,39 +964,46 @@
         <!-- Venue Cards Grid -->
         <div class="venue-grid" id="venueGrid">
 
-          <!-- Card 1: Featured Hero Venue (Jakarta - GBK Senayan) -->
-          <div class="venue-card venue-card-featured" data-city="jakarta">
-            <div class="venue-featured-img-wrap">
-              <img src="assets/stadium_hero.jpg" alt="GBK Senayan Sports Zone Jakarta" class="venue-featured-img" loading="lazy">
-              <div class="venue-featured-badge">
-                <i data-lucide="award"></i> VENUE UTAMA AKBAR
-              </div>
-              <div class="venue-featured-pill">
-                <i data-lucide="flame"></i> LIVE NOBAR INDONESIA VS VIETNAM
+          <!-- Card 1: Jakarta Pusat - GBK Senayan -->
+          <div class="venue-card" data-city="jakarta">
+            <div class="venue-card-img-wrap">
+              <img src="assets/stadium_hero.jpg" alt="GBK Senayan Fan Zone Jakarta" class="venue-card-img" loading="lazy">
+              <div class="venue-badge-overlay">
+                <span class="venue-city-tag"><i data-lucide="map-pin"></i> Jakarta Pusat</span>
+                <span class="venue-status-tag"><i data-lucide="check-circle-2"></i> Buka Reservasi</span>
               </div>
             </div>
+
             <div class="venue-card-body">
               <div>
-                <div class="venue-meta-top">
-                  <span class="venue-city-tag"><i data-lucide="map-pin"></i> Jakarta Pusat</span>
-                  <span class="venue-status-tag"><i data-lucide="check-circle-2"></i> Buka Reservasi</span>
-                </div>
-                <h3 class="venue-title">GBK Senayan Fan Zone & Sports Pavilion</h3>
+                <h3 class="venue-title">GBK Senayan Fan Zone</h3>
                 <p class="venue-address">
                   <i data-lucide="navigation"></i>
                   <span>Plaza Barat Gelora Bung Karno, Jl. Pintu Satu Senayan, Tanah Abang, Jakarta Pusat</span>
                 </p>
 
-                <div class="venue-match-pill">
-                  <div class="venue-match-title">
-                    <i data-lucide="tv"></i> <span>Indonesia vs Vietnam</span>
+                <!-- Hardened Match Schedule Box -->
+                <div class="venue-match-box">
+                  <div class="venue-match-head">
+                    <span class="venue-match-label"><i data-lucide="flame"></i> Laga Utama Nobar</span>
+                    <span class="venue-match-kickoff"><i data-lucide="clock"></i> 20:00 WIB</span>
                   </div>
-                  <span class="venue-match-time">20:00 WIB (Gate: 17:30)</span>
+                  <div class="venue-teams-matchup">
+                    <div class="venue-team-side">
+                      <img src="assets/flags/id.svg" alt="Indonesia" class="venue-team-flag" loading="lazy">
+                      <span class="venue-team-code">INDONESIA</span>
+                    </div>
+                    <div class="venue-vs-badge">VS</div>
+                    <div class="venue-team-side">
+                      <img src="assets/flags/vn.svg" alt="Vietnam" class="venue-team-flag" loading="lazy">
+                      <span class="venue-team-code">VIETNAM</span>
+                    </div>
+                  </div>
                 </div>
 
                 <div class="venue-capacity-bar-wrap">
                   <div class="venue-capacity-labels">
-                    <strong>Kapasitas Kursi: 800 Orang</strong>
+                    <strong>Kapasitas: 800 Suporter</strong>
                     <span>Tersisa 65 Kursi VIP</span>
                   </div>
                   <div class="venue-capacity-track">
@@ -1009,13 +1016,12 @@
                   <span class="venue-facility-chip"><i data-lucide="volume-2"></i> Audio Dolby Atmos</span>
                   <span class="venue-facility-chip"><i data-lucide="coffee"></i> Food Truck Zone</span>
                   <span class="venue-facility-chip"><i data-lucide="gift"></i> Doorprize Jersey</span>
-                  <span class="venue-facility-chip"><i data-lucide="users"></i> VIP Member Lounge</span>
                 </div>
               </div>
 
               <div class="venue-card-actions">
-                <button class="btn btn-primary" onclick="openJoinModal('Reservasi: GBK Senayan Jakarta')">
-                  Reservasi Kursi VIP (Gratis)
+                <button class="btn btn-primary" onclick="openJoinModal('Reservasi: GBK Senayan Fan Zone')">
+                  Reservasi Kursi
                 </button>
                 <a href="https://maps.google.com/?q=Plaza+Barat+GBK+Senayan" target="_blank" rel="noopener noreferrer" class="btn btn-outline" title="Buka di Google Maps">
                   <i data-lucide="external-link"></i> Rute
@@ -1024,25 +1030,41 @@
             </div>
           </div>
 
-          <!-- Card 2: Surabaya (Sutos Arena) -->
+          <!-- Card 2: Surabaya - Sutos Arena -->
           <div class="venue-card" data-city="surabaya">
+            <div class="venue-card-img-wrap">
+              <img src="assets/stadium_hero.jpg" alt="Sutos Arena Surabaya" class="venue-card-img" loading="lazy">
+              <div class="venue-badge-overlay">
+                <span class="venue-city-tag"><i data-lucide="map-pin"></i> Surabaya</span>
+                <span class="venue-status-tag"><i data-lucide="check-circle-2"></i> Buka Reservasi</span>
+              </div>
+            </div>
+
             <div class="venue-card-body">
               <div>
-                <div class="venue-meta-top">
-                  <span class="venue-city-tag"><i data-lucide="map-pin"></i> Surabaya</span>
-                  <span class="venue-status-tag"><i data-lucide="check-circle-2"></i> Buka Reservasi</span>
-                </div>
-                <h3 class="venue-title">Sutos Atrium & Sky Sports Arena</h3>
+                <h3 class="venue-title">Sutos Atrium & Sky Arena</h3>
                 <p class="venue-address">
                   <i data-lucide="navigation"></i>
                   <span>Surabaya Town Square, Jl. Hayam Wuruk No. 6, Sawahan, Surabaya</span>
                 </p>
 
-                <div class="venue-match-pill">
-                  <div class="venue-match-title">
-                    <i data-lucide="tv"></i> <span>Indonesia vs Vietnam</span>
+                <!-- Hardened Match Schedule Box -->
+                <div class="venue-match-box">
+                  <div class="venue-match-head">
+                    <span class="venue-match-label"><i data-lucide="flame"></i> Laga Utama Nobar</span>
+                    <span class="venue-match-kickoff"><i data-lucide="clock"></i> 20:00 WIB</span>
                   </div>
-                  <span class="venue-match-time">20:00 WIB</span>
+                  <div class="venue-teams-matchup">
+                    <div class="venue-team-side">
+                      <img src="assets/flags/id.svg" alt="Indonesia" class="venue-team-flag" loading="lazy">
+                      <span class="venue-team-code">INDONESIA</span>
+                    </div>
+                    <div class="venue-vs-badge">VS</div>
+                    <div class="venue-team-side">
+                      <img src="assets/flags/vn.svg" alt="Vietnam" class="venue-team-flag" loading="lazy">
+                      <span class="venue-team-code">VIETNAM</span>
+                    </div>
+                  </div>
                 </div>
 
                 <div class="venue-capacity-bar-wrap">
@@ -1058,8 +1080,8 @@
                 <div class="venue-facilities-wrap">
                   <span class="venue-facility-chip"><i data-lucide="monitor"></i> Dual Mega Projector</span>
                   <span class="venue-facility-chip"><i data-lucide="volume-2"></i> Chant Sound Booster</span>
-                  <span class="venue-facility-chip"><i data-lucide="gift"></i> Doorprize Smartphone</span>
-                  <span class="venue-facility-chip"><i data-lucide="music"></i> Live DJ Halftime</span>
+                  <span class="venue-facility-chip"><i data-lucide="gift"></i> Doorprize HP</span>
+                  <span class="venue-facility-chip"><i data-lucide="music"></i> DJ Halftime</span>
                 </div>
               </div>
 
@@ -1074,25 +1096,41 @@
             </div>
           </div>
 
-          <!-- Card 3: Bandung (Dago Heritage) -->
+          <!-- Card 3: Bandung - Dago Heritage -->
           <div class="venue-card" data-city="bandung">
+            <div class="venue-card-img-wrap">
+              <img src="assets/stadium_hero.jpg" alt="Dago Heritage Bandung" class="venue-card-img" loading="lazy">
+              <div class="venue-badge-overlay">
+                <span class="venue-city-tag"><i data-lucide="map-pin"></i> Bandung</span>
+                <span class="venue-status-tag"><i data-lucide="check-circle-2"></i> Buka Reservasi</span>
+              </div>
+            </div>
+
             <div class="venue-card-body">
               <div>
-                <div class="venue-meta-top">
-                  <span class="venue-city-tag"><i data-lucide="map-pin"></i> Bandung</span>
-                  <span class="venue-status-tag"><i data-lucide="check-circle-2"></i> Buka Reservasi</span>
-                </div>
                 <h3 class="venue-title">Dago Heritage Sports Pavilion</h3>
                 <p class="venue-address">
                   <i data-lucide="navigation"></i>
                   <span>Jl. Raya Dago Atas No. 128, Coblong, Kota Bandung</span>
                 </p>
 
-                <div class="venue-match-pill">
-                  <div class="venue-match-title">
-                    <i data-lucide="tv"></i> <span>Indonesia vs Vietnam</span>
+                <!-- Hardened Match Schedule Box -->
+                <div class="venue-match-box">
+                  <div class="venue-match-head">
+                    <span class="venue-match-label"><i data-lucide="flame"></i> Laga Utama Nobar</span>
+                    <span class="venue-match-kickoff"><i data-lucide="clock"></i> 20:00 WIB</span>
                   </div>
-                  <span class="venue-match-time">20:00 WIB</span>
+                  <div class="venue-teams-matchup">
+                    <div class="venue-team-side">
+                      <img src="assets/flags/id.svg" alt="Indonesia" class="venue-team-flag" loading="lazy">
+                      <span class="venue-team-code">INDONESIA</span>
+                    </div>
+                    <div class="venue-vs-badge">VS</div>
+                    <div class="venue-team-side">
+                      <img src="assets/flags/vn.svg" alt="Vietnam" class="venue-team-flag" loading="lazy">
+                      <span class="venue-team-code">VIETNAM</span>
+                    </div>
+                  </div>
                 </div>
 
                 <div class="venue-capacity-bar-wrap">
@@ -1108,8 +1146,8 @@
                 <div class="venue-facilities-wrap">
                   <span class="venue-facility-chip"><i data-lucide="monitor"></i> Outdoor Video Wall</span>
                   <span class="venue-facility-chip"><i data-lucide="coffee"></i> Kopi & BBQ Corner</span>
-                  <span class="venue-facility-chip"><i data-lucide="gift"></i> Doorprize Official Merch</span>
-                  <span class="venue-facility-chip"><i data-lucide="music"></i> Akustik Pre-Match</span>
+                  <span class="venue-facility-chip"><i data-lucide="gift"></i> Official Merch</span>
+                  <span class="venue-facility-chip"><i data-lucide="music"></i> Live Akustik</span>
                 </div>
               </div>
 
@@ -1124,25 +1162,41 @@
             </div>
           </div>
 
-          <!-- Card 4: Medan (Merdeka Walk Arena) -->
+          <!-- Card 4: Medan - Merdeka Walk -->
           <div class="venue-card" data-city="medan">
+            <div class="venue-card-img-wrap">
+              <img src="assets/stadium_hero.jpg" alt="Merdeka Walk Medan" class="venue-card-img" loading="lazy">
+              <div class="venue-badge-overlay">
+                <span class="venue-city-tag"><i data-lucide="map-pin"></i> Medan</span>
+                <span class="venue-status-tag"><i data-lucide="check-circle-2"></i> Buka Reservasi</span>
+              </div>
+            </div>
+
             <div class="venue-card-body">
               <div>
-                <div class="venue-meta-top">
-                  <span class="venue-city-tag"><i data-lucide="map-pin"></i> Medan</span>
-                  <span class="venue-status-tag"><i data-lucide="check-circle-2"></i> Buka Reservasi</span>
-                </div>
                 <h3 class="venue-title">Merdeka Walk Urban Arena</h3>
                 <p class="venue-address">
                   <i data-lucide="navigation"></i>
                   <span>Komp. Lapangan Merdeka, Jl. Balai Kota, Kesawan, Medan Barat</span>
                 </p>
 
-                <div class="venue-match-pill">
-                  <div class="venue-match-title">
-                    <i data-lucide="tv"></i> <span>Indonesia vs Vietnam</span>
+                <!-- Hardened Match Schedule Box -->
+                <div class="venue-match-box">
+                  <div class="venue-match-head">
+                    <span class="venue-match-label"><i data-lucide="flame"></i> Laga Utama Nobar</span>
+                    <span class="venue-match-kickoff"><i data-lucide="clock"></i> 20:00 WIB</span>
                   </div>
-                  <span class="venue-match-time">20:00 WIB</span>
+                  <div class="venue-teams-matchup">
+                    <div class="venue-team-side">
+                      <img src="assets/flags/id.svg" alt="Indonesia" class="venue-team-flag" loading="lazy">
+                      <span class="venue-team-code">INDONESIA</span>
+                    </div>
+                    <div class="venue-vs-badge">VS</div>
+                    <div class="venue-team-side">
+                      <img src="assets/flags/vn.svg" alt="Vietnam" class="venue-team-flag" loading="lazy">
+                      <span class="venue-team-code">VIETNAM</span>
+                    </div>
+                  </div>
                 </div>
 
                 <div class="venue-capacity-bar-wrap">
@@ -1157,9 +1211,9 @@
 
                 <div class="venue-facilities-wrap">
                   <span class="venue-facility-chip"><i data-lucide="monitor"></i> LED Cinema 6x4m</span>
-                  <span class="venue-facility-chip"><i data-lucide="coffee"></i> Kuliner Khas Medan</span>
-                  <span class="venue-facility-chip"><i data-lucide="volume-2"></i> Drum & Chant Corner</span>
-                  <span class="venue-facility-chip"><i data-lucide="gift"></i> Saldo E-Wallet Halftime</span>
+                  <span class="venue-facility-chip"><i data-lucide="coffee"></i> Kuliner Medan</span>
+                  <span class="venue-facility-chip"><i data-lucide="volume-2"></i> Drum & Chant</span>
+                  <span class="venue-facility-chip"><i data-lucide="gift"></i> Saldo E-Wallet</span>
                 </div>
               </div>
 
@@ -1174,25 +1228,41 @@
             </div>
           </div>
 
-          <!-- Card 5: Bali (Canggu Beachside Hub) -->
+          <!-- Card 5: Bali - Canggu Beachside -->
           <div class="venue-card" data-city="bali-diy">
+            <div class="venue-card-img-wrap">
+              <img src="assets/stadium_hero.jpg" alt="Canggu Beachside Bali" class="venue-card-img" loading="lazy">
+              <div class="venue-badge-overlay">
+                <span class="venue-city-tag"><i data-lucide="map-pin"></i> Bali</span>
+                <span class="venue-status-tag"><i data-lucide="check-circle-2"></i> Buka Reservasi</span>
+              </div>
+            </div>
+
             <div class="venue-card-body">
               <div>
-                <div class="venue-meta-top">
-                  <span class="venue-city-tag"><i data-lucide="map-pin"></i> Bali</span>
-                  <span class="venue-status-tag"><i data-lucide="check-circle-2"></i> Buka Reservasi</span>
-                </div>
-                <h3 class="venue-title">Canggu Beachside Football Lounge</h3>
+                <h3 class="venue-title">Canggu Football Lounge</h3>
                 <p class="venue-address">
                   <i data-lucide="navigation"></i>
                   <span>Jl. Pantai Batu Bolong No. 88, Canggu, Kuta Utara, Badung, Bali</span>
                 </p>
 
-                <div class="venue-match-pill">
-                  <div class="venue-match-title">
-                    <i data-lucide="tv"></i> <span>Indonesia vs Vietnam</span>
+                <!-- Hardened Match Schedule Box -->
+                <div class="venue-match-box">
+                  <div class="venue-match-head">
+                    <span class="venue-match-label"><i data-lucide="flame"></i> Laga Utama Nobar</span>
+                    <span class="venue-match-kickoff"><i data-lucide="clock"></i> 21:00 WITA</span>
                   </div>
-                  <span class="venue-match-time">21:00 WITA</span>
+                  <div class="venue-teams-matchup">
+                    <div class="venue-team-side">
+                      <img src="assets/flags/id.svg" alt="Indonesia" class="venue-team-flag" loading="lazy">
+                      <span class="venue-team-code">INDONESIA</span>
+                    </div>
+                    <div class="venue-vs-badge">VS</div>
+                    <div class="venue-team-side">
+                      <img src="assets/flags/vn.svg" alt="Vietnam" class="venue-team-flag" loading="lazy">
+                      <span class="venue-team-code">VIETNAM</span>
+                    </div>
+                  </div>
                 </div>
 
                 <div class="venue-capacity-bar-wrap">
@@ -1206,9 +1276,9 @@
                 </div>
 
                 <div class="venue-facilities-wrap">
-                  <span class="venue-facility-chip"><i data-lucide="monitor"></i> Triple Daylight Display</span>
-                  <span class="venue-facility-chip"><i data-lucide="coffee"></i> Beach Sunset Chill</span>
-                  <span class="venue-facility-chip"><i data-lucide="users"></i> Fans Multinasional</span>
+                  <span class="venue-facility-chip"><i data-lucide="monitor"></i> Daylight Screen</span>
+                  <span class="venue-facility-chip"><i data-lucide="coffee"></i> Sunset Chill</span>
+                  <span class="venue-facility-chip"><i data-lucide="users"></i> Fans Global</span>
                   <span class="venue-facility-chip"><i data-lucide="gift"></i> Doorprize Jersey</span>
                 </div>
               </div>
@@ -1224,25 +1294,41 @@
             </div>
           </div>
 
-          <!-- Card 6: Yogyakarta (Malioboro Terrace Hub) -->
+          <!-- Card 6: Yogyakarta - Malioboro Terrace -->
           <div class="venue-card" data-city="bali-diy">
+            <div class="venue-card-img-wrap">
+              <img src="assets/stadium_hero.jpg" alt="Malioboro Terrace Yogyakarta" class="venue-card-img" loading="lazy">
+              <div class="venue-badge-overlay">
+                <span class="venue-city-tag"><i data-lucide="map-pin"></i> Yogyakarta</span>
+                <span class="venue-status-tag" style="background-color: #fef3c7; color: #b45309;"><i data-lucide="flame"></i> Hampir Penuh</span>
+              </div>
+            </div>
+
             <div class="venue-card-body">
               <div>
-                <div class="venue-meta-top">
-                  <span class="venue-city-tag"><i data-lucide="map-pin"></i> Yogyakarta</span>
-                  <span class="venue-status-tag" style="background-color: #fef3c7; color: #b45309;"><i data-lucide="flame"></i> Hampir Penuh</span>
-                </div>
-                <h3 class="venue-title">Malioboro Terrace Football Hub</h3>
+                <h3 class="venue-title">Malioboro Football Hub</h3>
                 <p class="venue-address">
                   <i data-lucide="navigation"></i>
-                  <span>Jl. Malioboro No. 42, Sosromenduran, Gedong Tengen, Kota Yogyakarta</span>
+                  <span>Jl. Malioboro No. 42, Sosromenduran, Gedong Tengen, Yogyakarta</span>
                 </p>
 
-                <div class="venue-match-pill">
-                  <div class="venue-match-title">
-                    <i data-lucide="tv"></i> <span>Indonesia vs Vietnam</span>
+                <!-- Hardened Match Schedule Box -->
+                <div class="venue-match-box">
+                  <div class="venue-match-head">
+                    <span class="venue-match-label"><i data-lucide="flame"></i> Laga Utama Nobar</span>
+                    <span class="venue-match-kickoff"><i data-lucide="clock"></i> 20:00 WIB</span>
                   </div>
-                  <span class="venue-match-time">20:00 WIB</span>
+                  <div class="venue-teams-matchup">
+                    <div class="venue-team-side">
+                      <img src="assets/flags/id.svg" alt="Indonesia" class="venue-team-flag" loading="lazy">
+                      <span class="venue-team-code">INDONESIA</span>
+                    </div>
+                    <div class="venue-vs-badge">VS</div>
+                    <div class="venue-team-side">
+                      <img src="assets/flags/vn.svg" alt="Vietnam" class="venue-team-flag" loading="lazy">
+                      <span class="venue-team-code">VIETNAM</span>
+                    </div>
+                  </div>
                 </div>
 
                 <div class="venue-capacity-bar-wrap">
@@ -1256,9 +1342,9 @@
                 </div>
 
                 <div class="venue-facilities-wrap">
-                  <span class="venue-facility-chip"><i data-lucide="monitor"></i> 4K Cinema + 8 Monitor</span>
+                  <span class="venue-facility-chip"><i data-lucide="monitor"></i> 4K Cinema Screen</span>
                   <span class="venue-facility-chip"><i data-lucide="coffee"></i> Angkringan Partner</span>
-                  <span class="venue-facility-chip"><i data-lucide="users"></i> Bedah Taktik Suporter</span>
+                  <span class="venue-facility-chip"><i data-lucide="users"></i> Bedah Taktik</span>
                   <span class="venue-facility-chip"><i data-lucide="gift"></i> Doorprize Hoodie</span>
                 </div>
               </div>

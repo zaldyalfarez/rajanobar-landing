@@ -188,7 +188,7 @@ function filterVenues(city, btn) {
   cards.forEach(card => {
     const cardCity = card.getAttribute('data-city');
     if (city === 'all' || cardCity === city) {
-      card.style.display = card.classList.contains('venue-card-featured') ? 'grid' : 'flex';
+      card.style.display = 'flex';
       matchCount++;
       if (typeof gsap !== 'undefined') {
         gsap.fromTo(card, { opacity: 0, y: 15 }, { opacity: 1, y: 0, duration: 0.3, ease: 'power2.out' });

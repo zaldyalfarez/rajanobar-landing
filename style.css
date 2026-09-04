@@ -2924,23 +2924,16 @@ ul {
   border-color: var(--color-border-dark);
 }
 
-/* Featured Hero Venue (Spans Full Grid) */
-.venue-card-featured {
-  grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: 1.15fr 1fr;
-  border-color: #cbd5e1;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
-}
-
-.venue-featured-img-wrap {
+/* Uniform Card Header Image */
+.venue-card-img-wrap {
   position: relative;
-  min-height: 300px;
+  width: 100%;
+  height: 165px;
   overflow: hidden;
   background-color: #002c22;
 }
 
-.venue-featured-img {
+.venue-card-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -2948,108 +2941,56 @@ ul {
   transition: transform 400ms ease;
 }
 
-.venue-card:hover .venue-featured-img {
-  transform: scale(1.03);
+.venue-card:hover .venue-card-img {
+  transform: scale(1.06);
 }
 
-.venue-featured-badge {
+.venue-card-img-wrap::after {
+  content: '';
   position: absolute;
-  top: 16px;
-  left: 16px;
-  background: rgba(0, 59, 31, 0.9);
-  backdrop-filter: blur(8px);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 45px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.45), transparent);
+  pointer-events: none;
+}
+
+.venue-badge-overlay {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  z-index: 2;
+}
+
+.venue-badge-overlay .venue-city-tag {
+  background: rgba(0, 59, 31, 0.88);
+  backdrop-filter: blur(6px);
   color: #ffffff;
-  padding: 6px 14px;
-  border-radius: var(--radius-full);
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
 }
 
-.venue-featured-badge i,
-.venue-featured-badge svg {
-  width: 13px;
-  height: 13px;
+.venue-badge-overlay .venue-city-tag i,
+.venue-badge-overlay .venue-city-tag svg {
+  color: #4ade80;
 }
 
-.venue-featured-pill {
-  position: absolute;
-  bottom: 16px;
-  left: 16px;
-  background: rgba(220, 38, 38, 0.92);
-  backdrop-filter: blur(8px);
-  color: #ffffff;
-  padding: 5px 12px;
-  border-radius: var(--radius-full);
-  font-size: 0.68rem;
-  font-weight: 700;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.venue-featured-pill i,
-.venue-featured-pill svg {
-  width: 13px;
-  height: 13px;
+.venue-badge-overlay .venue-status-tag {
+  backdrop-filter: blur(6px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
 }
 
 .venue-card-body {
-  padding: var(--space-6);
+  padding: var(--space-5);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   flex: 1;
-}
-
-.venue-meta-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-2);
-  margin-bottom: var(--space-2);
-}
-
-.venue-city-tag {
-  font-size: 0.68rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--color-brand-green);
-  background-color: var(--color-brand-green-light);
-  padding: 3px 8px;
-  border-radius: var(--radius-xs);
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.venue-city-tag i,
-.venue-city-tag svg {
-  width: 11px;
-  height: 11px;
-}
-
-.venue-status-tag {
-  font-size: 0.68rem;
-  font-weight: 700;
-  color: #166534;
-  background-color: #dcfce7;
-  padding: 3px 8px;
-  border-radius: var(--radius-xs);
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.venue-status-tag i,
-.venue-status-tag svg {
-  width: 12px;
-  height: 12px;
 }
 
 .venue-title {
@@ -3079,43 +3020,112 @@ ul {
   color: var(--color-brand-green);
 }
 
-.venue-match-pill {
-  background-color: #f8fafc;
-  border: 1px solid var(--color-border);
+/* Hardened Match Schedule Box */
+.venue-match-box {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border: 1px solid #e2e8f0;
   border-radius: var(--radius-sm);
-  padding: 8px 12px;
+  padding: 10px 12px;
+  margin-bottom: var(--space-4);
+  transition: border-color 150ms ease, background-color 150ms ease;
+}
+
+.venue-card:hover .venue-match-box {
+  border-color: #cbd5e1;
+  background: #ffffff;
+}
+
+.venue-match-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.venue-match-label {
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: var(--color-accent-red);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.venue-match-label i,
+.venue-match-label svg {
+  width: 12px;
+  height: 12px;
+}
+
+.venue-match-kickoff {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #0f172a;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  padding: 2px 7px;
+  border-radius: var(--radius-xs);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.venue-match-kickoff i,
+.venue-match-kickoff svg {
+  width: 11px;
+  height: 11px;
+  color: var(--color-brand-green);
+}
+
+.venue-teams-matchup {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: var(--space-2);
-  margin-bottom: var(--space-4);
 }
 
-.venue-match-title {
-  font-size: var(--text-xs);
-  font-weight: 700;
-  color: var(--color-text-title);
+.venue-team-side {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
+  flex: 1;
 }
 
-.venue-match-title i,
-.venue-match-title svg {
-  width: 14px;
-  height: 14px;
-  color: var(--color-accent-red);
+.venue-team-side:last-child {
+  justify-content: flex-end;
+}
+
+.venue-team-flag {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  object-fit: cover;
   flex-shrink: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12);
+  border: 1.5px solid #ffffff;
 }
 
-.venue-match-time {
-  font-size: 0.7rem;
-  font-weight: 600;
-  color: var(--color-accent-red);
-  background: var(--color-accent-red-light);
-  padding: 2px 8px;
+.venue-team-code {
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: var(--color-text-title);
+  letter-spacing: 0.02em;
+}
+
+.venue-vs-badge {
+  font-size: 0.65rem;
+  font-weight: 900;
+  color: #ffffff;
+  background: #003b1f;
+  padding: 2px 6px;
   border-radius: var(--radius-xs);
-  white-space: nowrap;
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .venue-capacity-bar-wrap {
@@ -3465,10 +3475,6 @@ ul {
 
 /* 4. SMALL TABLETS & PHABLETS (<= 768px) */
 @media (max-width: 768px) {
-  .venue-card-featured {
-    grid-template-columns: 1fr;
-  }
-
   .venue-grid {
     grid-template-columns: 1fr;
   }
